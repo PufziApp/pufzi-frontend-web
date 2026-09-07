@@ -1,1 +1,18 @@
-{}
+{
+  "appName": "Pufzi",
+  "login": "Autentificare",
+  "logout": "Deconectare",
+  "register": "Creează cont",
+  "navbar": {
+    "color": {
+      "title": "Culoare",
+      "orange": "Portocaliu Cald",
+      "green": "Verde Salvie"
+    },
+    "mode": {
+      "title": "Mod",
+      "light": "Luminos",
+      "dark": "Întunecat"
+    }
+  }
+}

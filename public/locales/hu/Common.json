@@ -1,1 +1,18 @@
-{}
+{
+  "appName": "Pufzi",
+  "login": "Bejelentkezés",
+  "logout": "Kijelentkezés",
+  "register": "Regisztráció",
+  "navbar": {
+    "color": {
+      "title": "Szín",
+      "orange": "Meleg narancs",
+      "green": "Zsályazöld"
+    },
+    "mode": {
+      "title": "Mód",
+      "light": "Világos",
+      "dark": "Sötét"
+    }
+  }
+}

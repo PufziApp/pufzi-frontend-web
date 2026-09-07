@@ -1,1 +1,18 @@
-{}
+{
+  "appName": "Pufzi",
+  "login": "Login",
+  "logout": "Logout",
+  "register": "Register",
+  "navbar": {
+    "color": {
+      "title": "Color",
+      "orange": "Warm Orange",
+      "green": "Sage Green"
+    },
+    "mode": {
+      "title": "Mode",
+      "light": "Light",
+      "dark": "Dark"
+    }
+  }
+}
