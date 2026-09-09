@@ -39,6 +39,11 @@ export const InfoSteps: FC<StepsProps> = ({ stepIcon, stepName, stepTitle, stepD
               fontSize: 30,
               color: 'primary.main',
             },
+            transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 2,
+            },
           }}
         >
           {stepIcon}
