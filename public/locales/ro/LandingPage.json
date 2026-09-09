@@ -1,8 +1,8 @@
 {
   "menuOptions": {
-    "functionalities": "Funcționalități",
     "benefits": "Beneficii",
-    "prices": "Prețuri",
-    "faq": "Întrebări frecvente"
+    "faq": "Întrebări frecvente",
+    "functionalities": "Funcționalități",
+    "prices": "Prețuri"
   }
 }

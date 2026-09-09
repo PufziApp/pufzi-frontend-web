@@ -1,8 +1,8 @@
 {
   "menuOptions": {
-    "functionalities": "Functionalities",
     "benefits": "Benefits",
-    "prices": "Prices",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "functionalities": "Functionalities",
+    "prices": "Prices"
   }
 }

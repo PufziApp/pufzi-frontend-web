@@ -5,11 +5,16 @@ type PufziButtonType = ButtonProps & {
   label: string
 }
 
-export const PufziButton: FC<PufziButtonType> = ({ label, ...props }) => {
+export const PufziButton: FC<PufziButtonType> = ({
+  label,
+  sx,
+  variant = 'contained',
+  ...props
+}) => {
   return (
     <Button
       {...props}
-      variant="contained"
+      variant={variant}
       sx={{
         bgcolor: 'primary.main',
         color: 'primary.contrastText',
@@ -22,8 +27,8 @@ export const PufziButton: FC<PufziButtonType> = ({ label, ...props }) => {
           bgcolor: 'secondary.main',
           color: 'secondary.contrastText',
         },
+        ...sx,
       }}
-      {...props}
     >
       {label}
     </Button>

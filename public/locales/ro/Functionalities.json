@@ -1,0 +1,46 @@
+{
+  "cards": {
+    "booking": {
+      "description": "Programare simplificată online pentru clienți. Vizualizare disponibilitate și confirmare automată și sincronizare cu calendarul.",
+      "title": "Booking online"
+    },
+    "calendar": {
+      "description": "Vizualizare Zi / Săptămână / Lună. Gestionezi disponibilitatea fiecărui groomer, pauze și zile libere în timp real.",
+      "title": "Calendar inteligent"
+    },
+    "chat": {
+      "description": "Comunicare simplificată cu proprietarii de animale. Trimite mesaje, anunțuri și informații importante.",
+      "title": "Chat cu proprietarii"
+    },
+    "data": {
+      "description": "SSL, backup zilnic, GDPR. Acces bazat pe roluri:  Admin, Recepționer, Groomer.",
+      "title": "Date securizate"
+    },
+    "documents": {
+      "description": "Stocare sigură a fișelor și documentelor clienților. Acces rapid și ușor la informații importante.",
+      "title": "Fișe și documente digitale"
+    },
+    "profiles": {
+      "description": "Fișe detaliate pentru clienți și animale. Istoric complet, foto, notițe și preferințe.",
+      "title": "Profiluri complete"
+    },
+    "reminders": {
+      "description": "Trimite automat confirmări și reminder-e cu 24h înainte. Reduce neprezentările și crește satisfacția clienților.",
+      "title": "Reminder-e automate"
+    },
+    "services": {
+      "description": "Configurezi oricâte servicii cu durată, preț și groomer-i responsabili. Pachete și prețuri speciale.",
+      "title": "Servicii personalizate"
+    },
+    "statistics": {
+      "description": "Grafice detaliate pentru venituri, performanță echipă, detalii - programări și clienți noi. Filtrare completă.",
+      "title": "Statistici avansate"
+    }
+  },
+  "sectionDescription": "Construită de la zero pentru saloanele de coafură canină, cu funcții care îți simplifică fiecare aspect al afacerii.",
+  "sectionTitle": {
+    "highlight": "într-un singur loc",
+    "main": "Tot ce ai nevoie,"
+  },
+  "title": "Funcționalități"
+}

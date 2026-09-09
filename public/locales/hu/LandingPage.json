@@ -1,8 +1,8 @@
 {
   "menuOptions": {
-    "functionalities": "Funkciók",
     "benefits": "Előnyök",
-    "prices": "Árak",
-    "faq": "Gyakran ismételt kérdések"
+    "faq": "Gyakran ismételt kérdések",
+    "functionalities": "Funkciók",
+    "prices": "Árak"
   }
 }

@@ -1,0 +1,46 @@
+{
+  "cards": {
+    "booking": {
+      "description": "Egyszerű online időpontfoglalás az ügyfelek számára. Valós idejű elérhetőség, automatikus visszaigazolás és naptárszinkronizálás.",
+      "title": "Online időpontfoglalás"
+    },
+    "calendar": {
+      "description": "Napi / heti / havi nézet. Kezeld minden kutyakozmetikus elérhetőségét, szüneteit és szabadnapjait valós időben.",
+      "title": "Intelligens naptár"
+    },
+    "chat": {
+      "description": "Egyszerű kommunikáció a kisállat-tulajdonosokkal. Küldj üzeneteket, értesítéseket és fontos információkat.",
+      "title": "Chat a gazdikkal"
+    },
+    "data": {
+      "description": "SSL, napi biztonsági mentés és GDPR-megfelelőség. Szerepköralapú hozzáférés: Adminisztrátor, Recepciós, Kutyakozmetikus.",
+      "title": "Biztonságos adatok"
+    },
+    "documents": {
+      "description": "Az ügyféladatlapok és dokumentumok biztonságos tárolása. Gyors és egyszerű hozzáférés a fontos információkhoz.",
+      "title": "Digitális adatlapok és dokumentumok"
+    },
+    "profiles": {
+      "description": "Részletes profilok az ügyfelek és háziállataik számára. Teljes előzmények, fényképek, jegyzetek és preferenciák.",
+      "title": "Teljes profilok"
+    },
+    "reminders": {
+      "description": "Küldj automatikus visszaigazolásokat és emlékeztetőket 24 órával korábban. Csökkentsd a meg nem jelenések számát és növeld az ügyfelek elégedettségét.",
+      "title": "Automatikus emlékeztetők"
+    },
+    "services": {
+      "description": "Állíts be korlátlan számú szolgáltatást időtartammal, árral és kijelölt kutyakozmetikusokkal. Csomagok és egyedi árak.",
+      "title": "Személyre szabott szolgáltatások"
+    },
+    "statistics": {
+      "description": "Részletes grafikonok a bevételekről, a csapat teljesítményéről, az időpontokról és az új ügyfelekről. Teljes körű szűrés.",
+      "title": "Részletes statisztikák"
+    }
+  },
+  "sectionDescription": "Az alapoktól kutyakozmetikai szalonok számára készült, olyan funkciókkal, amelyek leegyszerűsítik vállalkozásod minden részét.",
+  "sectionTitle": {
+    "highlight": "egy helyen",
+    "main": "Minden, amire szükséged van,"
+  },
+  "title": "Funkciók"
+}

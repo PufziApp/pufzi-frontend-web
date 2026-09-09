@@ -14,6 +14,7 @@ export const orangeColors = {
     background: {
       default: '#FFF8F0',
       paper: '#FFFDF9',
+      main: '#FFFFFF',
     },
 
     text: {
@@ -57,6 +58,7 @@ export const orangeColors = {
     background: {
       default: '#1C1410',
       paper: '#261C14',
+      main: '#000000',
     },
 
     text: {

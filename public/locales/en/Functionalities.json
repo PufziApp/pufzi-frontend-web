@@ -1,0 +1,46 @@
+{
+  "cards": {
+    "booking": {
+      "description": "Simple online booking for clients. Real-time availability, automatic confirmation, and calendar synchronization.",
+      "title": "Online Booking"
+    },
+    "calendar": {
+      "description": "Day / Week / Month view. Manage each groomer's availability, breaks, and days off in real time.",
+      "title": "Smart Calendar"
+    },
+    "chat": {
+      "description": "Simplified communication with pet owners. Send messages, announcements, and important information.",
+      "title": "Chat with Pet Owners"
+    },
+    "data": {
+      "description": "SSL, daily backups, and GDPR compliance. Role-based access: Admin, Receptionist, Groomer.",
+      "title": "Secure Data"
+    },
+    "documents": {
+      "description": "Secure storage for client records and documents. Quick and easy access to important information.",
+      "title": "Digital Records and Documents"
+    },
+    "profiles": {
+      "description": "Detailed profiles for clients and pets. Complete history, photos, notes, and preferences.",
+      "title": "Complete Profiles"
+    },
+    "reminders": {
+      "description": "Automatically send confirmations and reminders 24 hours in advance. Reduce no-shows and increase client satisfaction.",
+      "title": "Automatic Reminders"
+    },
+    "services": {
+      "description": "Configure unlimited services with duration, price, and assigned groomers. Create packages and special pricing.",
+      "title": "Custom Services"
+    },
+    "statistics": {
+      "description": "Detailed charts for revenue, team performance, appointments, and new clients. Complete filtering options.",
+      "title": "Advanced Statistics"
+    }
+  },
+  "sectionDescription": "Built from the ground up for dog grooming salons, with features that simplify every aspect of your business.",
+  "sectionTitle": {
+    "highlight": "all in one place",
+    "main": "Everything you need,"
+  },
+  "title": "Features"
+}

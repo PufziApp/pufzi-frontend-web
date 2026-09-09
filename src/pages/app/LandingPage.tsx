@@ -1,4 +1,6 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
+import { Hero } from './components/Hero/Hero'
+import { MainPages } from './components/MainPages/MainPages'
 
 export const LandingPage = () => {
   return (
@@ -6,10 +8,10 @@ export const LandingPage = () => {
       sx={{
         minHeight: '100vh',
         bgcolor: 'background.default',
-        p: 4,
       }}
     >
-      <Typography variant="h2">Landing Page</Typography>
+      <Hero />
+      <MainPages />
     </Box>
   )
 }
