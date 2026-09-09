@@ -1,0 +1,30 @@
+{
+  "benefits": {
+    "account": {
+      "description": "Regisztrálj néhány másodperc alatt, és állítsd be a szalonod profilját.",
+      "stepName": "1. lépés",
+      "title": "Hozd létre a szalon fiókját"
+    },
+    "appointments": {
+      "description": "Az ügyfelek online foglalhatnak időpontot, vagy te is rögzítheted manuálisan a meglévő időpontokat.",
+      "stepName": "3. lépés",
+      "title": "Fogadj időpontfoglalásokat"
+    },
+    "onePlace": {
+      "description": "Teljes dashboard, azonnali értesítések és minden fontos információ egyetlen kattintásra.",
+      "stepName": "4. lépés",
+      "title": "Kezelj mindent egy helyen"
+    },
+    "teams": {
+      "description": "Add meg a kutyakozmetikusokat, a munkaidőt, a szolgáltatásokat és az árakat.",
+      "stepName": "2. lépés",
+      "title": "Add hozzá a csapatot és a szolgáltatásokat"
+    }
+  },
+  "sectionDescription": "Egyszerű beállítás, technikai ismeretek nélkül",
+  "sectionTitle": {
+    "highlight": "4 egyszerű lépésben",
+    "main": "Kezdj el mindent"
+  },
+  "title": "Előnyök"
+}

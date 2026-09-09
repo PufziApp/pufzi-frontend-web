@@ -1,0 +1,30 @@
+{
+  "benefits": {
+    "account": {
+      "description": "Sign up in just a few seconds and set up your salon profile.",
+      "stepName": "Step 1",
+      "title": "Create your salon account"
+    },
+    "appointments": {
+      "description": "Clients can book online, or you can manually add existing appointments.",
+      "stepName": "Step 3",
+      "title": "Receive appointments"
+    },
+    "onePlace": {
+      "description": "A complete dashboard, instant notifications, and all the information you need just one click away.",
+      "stepName": "Step 4",
+      "title": "Manage everything in one place"
+    },
+    "teams": {
+      "description": "Add your groomers, working hours, and services together with your prices.",
+      "stepName": "Step 2",
+      "title": "Add your team and services"
+    }
+  },
+  "sectionDescription": "Simple setup, no technical knowledge required",
+  "sectionTitle": {
+    "highlight": "4 simple steps",
+    "main": "Get started in"
+  },
+  "title": "Benefits"
+}

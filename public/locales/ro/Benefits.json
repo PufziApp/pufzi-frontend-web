@@ -1,0 +1,30 @@
+{
+  "benefits": {
+    "account": {
+      "description": "Înregistrează-te în câteva secunde și configurează profilul salonului tău.",
+      "stepName": "Pasul 1",
+      "title": "Creează contul salonului"
+    },
+    "appointments": {
+      "description": "Clienții se programează online sau tu adaugi manual programările existente.",
+      "stepName": "Pasul 3",
+      "title": "Primești programări"
+    },
+    "onePlace": {
+      "description": "Dashboard complet, notificări instant și toate informațiile la un click distanță.",
+      "stepName": "Pasul 4",
+      "title": "Gestionezi totul dintr-un loc"
+    },
+    "teams": {
+      "description": "Introdu groom-erii, orarul de lucru și serviciile oferite cu prețurile tale.",
+      "stepName": "Pasul 2",
+      "title": "Adaugă echipa și serviciile"
+    }
+  },
+  "sectionDescription": "Configurare simplă, fără pregătire tehnică",
+  "sectionTitle": {
+    "highlight": "4 pași simpli",
+    "main": "Pornești în"
+  },
+  "title": "Beneficii"
+}
