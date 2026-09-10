@@ -21,6 +21,23 @@
       "title": "Adaugă echipa și serviciile"
     }
   },
+  "interface": {
+    "dashboard": {
+      "info": {
+        "calendar": "Calendar vizual cu disponibilitate în timp real",
+        "notifications": "Notificări și reminder-e automate",
+        "profiles": "Profiluri detaliate pentru clienți și animale",
+        "statistics": "Statistici clare și grafice interactive"
+      },
+      "title": "Dashboard complet la un click distanță"
+    },
+    "sectionDescription": "Designul gândit pentru viteză și claritate. Fiecare element la locul lui.",
+    "sectionTitle": {
+      "highlight": "îți place să o folosești",
+      "main": "O interfață care"
+    },
+    "title": "Interfață"
+  },
   "sectionDescription": "Configurare simplă, fără pregătire tehnică",
   "sectionTitle": {
     "highlight": "4 pași simpli",

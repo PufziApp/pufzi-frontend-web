@@ -21,6 +21,23 @@
       "title": "Add your team and services"
     }
   },
+  "interface": {
+    "dashboard": {
+      "info": {
+        "calendar": "Visual calendar with real-time availability",
+        "notifications": "Automatic notifications and reminders",
+        "profiles": "Detailed profiles for clients and pets",
+        "statistics": "Clear statistics and interactive charts"
+      },
+      "title": "A complete dashboard just one click away"
+    },
+    "sectionDescription": "Designed for speed and clarity. Everything exactly where you need it.",
+    "sectionTitle": {
+      "highlight": "you'll love to use",
+      "main": "An interface"
+    },
+    "title": "Interface"
+  },
   "sectionDescription": "Simple setup, no technical knowledge required",
   "sectionTitle": {
     "highlight": "4 simple steps",

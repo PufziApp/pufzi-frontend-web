@@ -21,6 +21,23 @@
       "title": "Add hozzá a csapatot és a szolgáltatásokat"
     }
   },
+  "interface": {
+    "dashboard": {
+      "info": {
+        "calendar": "Vizuális naptár valós idejű elérhetőséggel",
+        "notifications": "Automatikus értesítések és emlékeztetők",
+        "profiles": "Részletes profilok az ügyfelek és háziállataik számára",
+        "statistics": "Átlátható statisztikák és interaktív grafikonok"
+      },
+      "title": "Teljes dashboard egyetlen kattintásra"
+    },
+    "sectionDescription": "A gyorsaság és az átláthatóság jegyében tervezve. Minden pontosan ott van, ahol szükséged van rá.",
+    "sectionTitle": {
+      "highlight": "amit öröm használni",
+      "main": "Egy felület,"
+    },
+    "title": "Felület"
+  },
   "sectionDescription": "Egyszerű beállítás, technikai ismeretek nélkül",
   "sectionTitle": {
     "highlight": "4 egyszerű lépésben",

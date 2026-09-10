@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
-import { INFO_STEPS } from '../types/types.info'
-import { InfoSteps } from './InfoSteps'
+import { INFO_STEPS } from '../../types/types.info'
+import { InfoSteps } from './components/InfoSteps/InfoSteps'
 
 export const Steps = () => {
   return (

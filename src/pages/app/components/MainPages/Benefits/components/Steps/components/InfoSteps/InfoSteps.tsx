@@ -49,7 +49,6 @@ export const InfoSteps: FC<StepsProps> = ({ stepIcon, stepName, stepTitle, stepD
           {stepIcon}
         </Box>
       )}
-
       <Typography
         variant="body1"
         sx={{
@@ -65,7 +64,6 @@ export const InfoSteps: FC<StepsProps> = ({ stepIcon, stepName, stepTitle, stepD
       >
         {t(stepName)}
       </Typography>
-
       <Typography
         variant="h6"
         sx={{
@@ -80,7 +78,6 @@ export const InfoSteps: FC<StepsProps> = ({ stepIcon, stepName, stepTitle, stepD
       >
         {t(stepTitle)}
       </Typography>
-
       <Typography
         sx={{
           color: 'text.secondary',
@@ -91,7 +88,6 @@ export const InfoSteps: FC<StepsProps> = ({ stepIcon, stepName, stepTitle, stepD
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'center',
-
           maxWidth: 340,
         }}
       >
