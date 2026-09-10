@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material'
-import { IconTitle } from '../../../../../components/IconTitle/IconTitle'
 import PaidIcon from '@mui/icons-material/Paid'
+import { IconTitle } from '../../../../../components/IconTitle/IconTitle'
 
 export const Prices = () => {
   return (

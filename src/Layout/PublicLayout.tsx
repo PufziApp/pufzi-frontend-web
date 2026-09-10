@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import { Outlet } from 'react-router-dom'
-import { Navbar } from '../pages/app/components/Navbar/Navbar'
-import { Footer } from '../pages/app/components/Footer/Footer'
+import { Navbar } from '../pages/public/components/Navbar/Navbar'
+import { Footer } from '../pages/public/components/Footer/Footer'
 
 export const PublicLayout = () => {
   return (

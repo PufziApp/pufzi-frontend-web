@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { PublicLayout } from '../Layout/PublicLayout'
-import { LandingPage } from '../pages/app/LandingPage'
-import { PageNotFound } from '../pages/app/components/PageNotFound/PageNotFound'
+import { LandingPage } from '../pages/public/LandingPage'
+import { PageNotFound } from '../pages/public/components/PageNotFound/PageNotFound'
 
 export const router = createBrowserRouter([
   {
