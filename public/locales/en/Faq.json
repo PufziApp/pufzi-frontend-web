@@ -1,0 +1,32 @@
+{
+  "answers": {
+    "answer1": "Yes. You can test all the main features during the 7-day trial period, with no obligation to continue after it ends.",
+    "answer10": "Yes. You can cancel your subscription without a long-term contract, and your access will remain active until the end of the period you have already paid for.",
+    "answer2": "Yes. Clients can view the services, availability, and open time slots and submit their own appointment request.",
+    "answer3": "Yes, every appointment must be confirmed manually.",
+    "answer4": "Yes. You can change the date, time, service, or employee, and the client will be notified about the change.",
+    "answer5": "Yes. You can manually create an appointment directly in the app for clients who contact you outside the platform.",
+    "answer6": "Yes. You can add team members and configure their roles, services, working hours, and availability, and they will also have their own accounts.",
+    "answer7": "The platform automatically takes into account employee schedules, service duration, and existing appointments to display only available time slots.",
+    "answer8": "Yes. They can receive notifications for appointments, changes, vaccinations, or recommendations for their next visit.",
+    "answer9": "Yes. The platform can include direct messaging between the business and the client, so appointment-related information stays in one place."
+  },
+  "questions": {
+    "question1": "Can I try the platform for free before paying?",
+    "question10": "Can I cancel my subscription at any time?",
+    "question2": "Can my clients book appointments online by themselves?",
+    "question3": "Do I need to confirm every appointment?",
+    "question4": "Can I modify or reschedule an appointment?",
+    "question5": "Can I add appointments made by phone or directly at reception?",
+    "question6": "Can I have multiple employees under the same business account?",
+    "question7": "How do I avoid overlapping appointments?",
+    "question8": "Do clients receive reminders?",
+    "question9": "Can I communicate directly with clients?"
+  },
+  "sectionDescription": "Everything you need to know before getting started.",
+  "sectionTitle": {
+    "highlight": "questions",
+    "main": "Frequently asked"
+  },
+  "title": "FAQ"
+}

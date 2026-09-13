@@ -14,8 +14,6 @@ void i18n
 
     load: 'languageOnly',
 
-    ns: ['Common', 'LoginPage', 'RegisterPage'],
-
     defaultNS: 'Common',
 
     backend: {
