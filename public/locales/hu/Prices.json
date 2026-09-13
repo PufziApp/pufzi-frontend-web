@@ -1,0 +1,27 @@
+{
+  "priceCard": {
+    "button": "Próbáld ki a PRO-t 7 napig",
+    "description": "Növekvő szalonok számára",
+    "info": {
+      "booking": "Online időpontfoglalás 0–24",
+      "clients": "Korlátlan ügyfél és kisállat",
+      "history": "Kisállatok kozmetikai előzményei",
+      "messages": "Közvetlen üzenetküldés az ügyfelekkel",
+      "notifications": "Automatikus értesítések és emlékeztetők",
+      "reservations": "Teljes időpont- és naptárkezelés",
+      "reviews": "Ügyfélértékelések és visszajelzések",
+      "services": "Egyedi szolgáltatások és árak",
+      "statistics": "Teljes statisztikák és riportok",
+      "team": "Csapat és elérhetőség"
+    },
+    "month": "/ hó",
+    "price": "200 RON",
+    "type": "PRO"
+  },
+  "sectionDescription": "Nincsenek meglepetések. Bármikor lemondhatod.",
+  "sectionTitle": {
+    "highlight": "átlátható",
+    "main": "Árazás"
+  },
+  "title": "Árazás"
+}

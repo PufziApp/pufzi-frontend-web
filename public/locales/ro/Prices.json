@@ -1,0 +1,27 @@
+{
+  "priceCard": {
+    "button": "Încearcă PRO 7 zile",
+    "description": "Pentru saloane în creștere",
+    "info": {
+      "booking": "Booking online 24/7",
+      "clients": "Clienți & animale nelimitate",
+      "history": "Istoric grooming pentru animale",
+      "messages": "Mesaje directe cu clienții",
+      "notifications": "Notificări & remindere automate",
+      "reservations": "Programări & calendar complet",
+      "reviews": "Recenzii & feedback clienți",
+      "services": "Servicii & prețuri personalizate",
+      "statistics": "Statistici & rapoarte complete",
+      "team": "Echipă & disponibilitate"
+    },
+    "month": "/ lună",
+    "price": "200 RON",
+    "type": "PRO"
+  },
+  "sectionDescription": "Fără surprize. Anulezi oricând.",
+  "sectionTitle": {
+    "highlight": "transparente",
+    "main": "Prețuri"
+  },
+  "title": "Prețuri"
+}

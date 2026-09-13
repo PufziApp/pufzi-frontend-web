@@ -151,12 +151,14 @@ export const sageColors = {
     background: {
       default: '#1A2420',
       paper: '#1F2E28',
+      main: '#000000',
     },
 
     text: {
       primary: '#F0EDE5',
       secondary: '#7A9880',
       disabled: '#7A9880',
+      main: '#000000',
     },
 
     success: {

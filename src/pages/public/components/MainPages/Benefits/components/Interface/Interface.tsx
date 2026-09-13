@@ -19,26 +19,22 @@ export const Interface = () => {
             borderColor: 'text.primary',
             borderRadius: '20px',
             objectFit: 'contain',
-            transformOrigin: 'center bottom',
-            animation: 'logoWobble 4.5s ease-in-out infinite',
-            '@keyframes logoWobble': {
+            animation: 'floating 7s ease-in-out infinite',
+            '@keyframes floating': {
               '0%': {
-                transform: 'rotate(0deg)',
+                transform: 'translateY(0px) rotate(0deg)',
               },
-              '20%': {
-                transform: 'rotate(-4deg)',
+              '25%': {
+                transform: 'translateY(-12px) rotate(2deg)',
               },
-              '40%': {
-                transform: 'rotate(0deg)',
+              '50%': {
+                transform: 'translateY(0px) rotate(0deg)',
               },
-              '60%': {
-                transform: 'rotate(4deg)',
-              },
-              '80%': {
-                transform: 'rotate(0deg)',
+              '75%': {
+                transform: 'translateY(-12px) rotate(-2deg)',
               },
               '100%': {
-                transform: 'rotate(0deg)',
+                transform: 'translateY(0px) rotate(0deg)',
               },
             },
           }}
