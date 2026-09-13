@@ -26,6 +26,7 @@ export const GeneralInformation = () => {
           startIcon={<PlayArrowIcon />}
           label={t('howItWorksText')}
           variant="outlined"
+          href="#benefits"
           sx={{
             borderRadius: '15px',
             color: 'text.primary',
