@@ -22,7 +22,7 @@ export const SummaryItem = ({ label, value }: SummaryItemProps) => {
       <Typography
         sx={{
           color: 'text.primary',
-          fontWeight: 600,
+          fontWeight: 700,
           wordBreak: 'break-word',
           fontSize: 15,
         }}
