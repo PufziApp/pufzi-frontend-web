@@ -6,28 +6,28 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded'
 
 import { useTranslation } from 'react-i18next'
+import { RO, GB, HU } from 'country-flag-icons/react/3x2'
 
 type LanguageCode = 'ro' | 'en' | 'hu'
 
-const LANGUAGE_OPTIONS: {
-  code: LanguageCode
-  label: string
-  shortLabel: string
-}[] = [
+const LANGUAGE_OPTIONS = [
   {
-    code: 'ro',
+    code: 'ro' as const,
     label: 'Română',
     shortLabel: 'RO',
+    Flag: RO,
   },
   {
-    code: 'en',
+    code: 'en' as const,
     label: 'English',
     shortLabel: 'EN',
+    Flag: GB,
   },
   {
-    code: 'hu',
+    code: 'hu' as const,
     label: 'Magyar',
     shortLabel: 'HU',
+    Flag: HU,
   },
 ]
 
@@ -43,6 +43,8 @@ export const LanguageSwitcher = () => {
   const currentLanguage =
     LANGUAGE_OPTIONS.find((language) => language.code === normalizedLanguage) ?? LANGUAGE_OPTIONS[0]
 
+  const CurrentFlag = currentLanguage.Flag
+
   const handleLanguageChange = async (language: LanguageCode) => {
     await i18n.changeLanguage(language)
 
@@ -57,7 +59,7 @@ export const LanguageSwitcher = () => {
         onClick={(event) => setAnchorEl(event.currentTarget)}
         endIcon={<KeyboardArrowDownRoundedIcon />}
         sx={{
-          minWidth: 72,
+          minWidth: 92,
           height: 40,
           px: 1.5,
           borderRadius: 2,
@@ -73,7 +75,31 @@ export const LanguageSwitcher = () => {
           },
         }}
       >
-        {currentLanguage.shortLabel}
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{
+            alignItems: 'center',
+          }}
+        >
+          <CurrentFlag
+            style={{
+              width: 22,
+              height: 16,
+              borderRadius: 2,
+              objectFit: 'cover',
+            }}
+          />
+
+          <Typography
+            sx={{
+              fontSize: 14,
+              fontWeight: 600,
+            }}
+          >
+            {currentLanguage.shortLabel}
+          </Typography>
+        </Stack>
       </Button>
 
       <Menu
@@ -84,35 +110,53 @@ export const LanguageSwitcher = () => {
           paper: {
             sx: {
               mt: 1,
-              width: 170,
+              width: 190,
               border: '1px solid',
               borderColor: 'divider',
+              borderRadius: 2,
             },
           },
         }}
       >
-        {LANGUAGE_OPTIONS.map((language) => (
-          <MenuItem key={language.code} onClick={() => handleLanguageChange(language.code)}>
-            <Stack
-              direction="row"
-              spacing={1}
-              sx={{
-                width: '100%',
-                alignItems: 'center',
-              }}
+        {LANGUAGE_OPTIONS.map((language) => {
+          const Flag = language.Flag
+
+          return (
+            <MenuItem
+              key={language.code}
+              onClick={() => handleLanguageChange(language.code)}
+              selected={currentLanguage.code === language.code}
             >
-              <Typography
+              <Stack
+                direction="row"
+                spacing={1.5}
                 sx={{
-                  flex: 1,
+                  width: '100%',
+                  alignItems: 'center',
                 }}
               >
-                {language.label}
-              </Typography>
+                <Flag
+                  style={{
+                    width: 24,
+                    height: 18,
+                    borderRadius: 2,
+                    objectFit: 'cover',
+                  }}
+                />
 
-              {currentLanguage.code === language.code && <CheckRoundedIcon fontSize="small" />}
-            </Stack>
-          </MenuItem>
-        ))}
+                <Typography
+                  sx={{
+                    flex: 1,
+                  }}
+                >
+                  {language.label}
+                </Typography>
+
+                {currentLanguage.code === language.code && <CheckRoundedIcon fontSize="small" />}
+              </Stack>
+            </MenuItem>
+          )
+        })}
       </Menu>
     </>
   )

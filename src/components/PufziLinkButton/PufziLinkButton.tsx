@@ -1,8 +1,10 @@
 import { Button, type ButtonProps } from '@mui/material'
 import type { FC } from 'react'
+import type { To } from 'react-router-dom'
 
 type PufziLinkButtonType = ButtonProps & {
   label: string
+  to?: To
 }
 
 export const PufziLinkButton: FC<PufziLinkButtonType> = ({
