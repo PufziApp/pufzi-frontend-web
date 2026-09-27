@@ -1,45 +1,49 @@
-import { useState } from 'react'
+import { useState, type ChangeEvent } from 'react'
+
 import { IconButton, InputAdornment, Stack } from '@mui/material'
-import { useTranslation } from 'react-i18next'
 
 import VisibilityRoundedIcon from '@mui/icons-material/VisibilityRounded'
 import VisibilityOffRoundedIcon from '@mui/icons-material/VisibilityOffRounded'
 
-import { PufziButton } from '../../../../../../components/PufziButton/PufziButton'
-import { PufziFormSubtitle } from '../../../../../../components/PufziFormSubtitle/PufziFormSubtitle'
-import { PufziFormTitle } from '../../../../../../components/PufziFormTitle/PufziFormTitle'
-import { PufziTextField } from '../../../../../../components/PufziTextField/PufziTextField'
+import { useTranslation } from 'react-i18next'
 
-import type { RegisterFormData } from '../RegisterForm'
+import type { ClientRegisterFormData } from './ClientRegisterForm'
+import { PufziFormTitle } from '../../../../../components/PufziFormTitle/PufziFormTitle'
+import { PufziFormSubtitle } from '../../../../../components/PufziFormSubtitle/PufziFormSubtitle'
+import { PufziTextField } from '../../../../../components/PufziTextField/PufziTextField'
+import { PufziButton } from '../../../../../components/PufziButton/PufziButton'
 
-type PersonalInformationStepProps = {
-  formData: RegisterFormData
+type ClientPersonalInformationProps = {
+  formData: ClientRegisterFormData
 
   handleChange: (
-    field: keyof RegisterFormData
-  ) => (event: React.ChangeEvent<HTMLInputElement>) => void
+    field: keyof ClientRegisterFormData
+  ) => (event: ChangeEvent<HTMLInputElement>) => void
 
-  handleNext: () => void
+  handleRegister: () => void
 }
 
-export const PersonalInformationStep = ({
+export const ClientPersonalInformation = ({
   formData,
   handleChange,
-  handleNext,
-}: PersonalInformationStepProps) => {
-  const { t } = useTranslation('Register')
+  handleRegister,
+}: ClientPersonalInformationProps) => {
+  const { t } = useTranslation('ClientRegisterPage')
 
   const [showPassword, setShowPassword] = useState(false)
+
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   return (
     <Stack spacing={3}>
+      {/* TITLE */}
       <Stack spacing={1}>
-        <PufziFormTitle text={t('personalInformationStep.formTitle')} />
+        <PufziFormTitle text={t('personalInformation.formTitle')} />
 
-        <PufziFormSubtitle text={t('personalInformationStep.formSubtitle')} />
+        <PufziFormSubtitle text={t('personalInformation.formSubtitle')} />
       </Stack>
 
+      {/* FIELDS */}
       <Stack spacing={2}>
         <Stack
           direction={{
@@ -49,13 +53,13 @@ export const PersonalInformationStep = ({
           spacing={2}
         >
           <PufziTextField
-            label={t('personalInformationStep.fields.firstName')}
+            label={t('personalInformation.fields.firstName')}
             value={formData.firstName}
             onChange={handleChange('firstName')}
           />
 
           <PufziTextField
-            label={t('personalInformationStep.fields.lastName')}
+            label={t('personalInformation.fields.lastName')}
             value={formData.lastName}
             onChange={handleChange('lastName')}
           />
@@ -68,6 +72,7 @@ export const PersonalInformationStep = ({
           onChange={handleChange('email')}
         />
 
+        {/* PASSWORD */}
         <PufziTextField
           label={t('common.fields.password')}
           type={showPassword ? 'text' : 'password'}
@@ -78,9 +83,13 @@ export const PersonalInformationStep = ({
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
-                    onClick={() => setShowPassword((previous) => !previous)}
                     edge="end"
-                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    onClick={() => setShowPassword((previous) => !previous)}
+                    aria-label={
+                      showPassword
+                        ? t('common.passwordVisibility.hide')
+                        : t('common.passwordVisibility.show')
+                    }
                   >
                     {showPassword ? (
                       <VisibilityRoundedIcon
@@ -102,6 +111,7 @@ export const PersonalInformationStep = ({
           }}
         />
 
+        {/* CONFIRM PASSWORD */}
         <PufziTextField
           label={t('common.fields.confirmPassword')}
           type={showConfirmPassword ? 'text' : 'password'}
@@ -112,10 +122,12 @@ export const PersonalInformationStep = ({
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
-                    onClick={() => setShowConfirmPassword((previous) => !previous)}
                     edge="end"
+                    onClick={() => setShowConfirmPassword((previous) => !previous)}
                     aria-label={
-                      showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'
+                      showConfirmPassword
+                        ? t('common.passwordVisibility.hide')
+                        : t('common.passwordVisibility.show')
                     }
                   >
                     {showConfirmPassword ? (
@@ -140,9 +152,9 @@ export const PersonalInformationStep = ({
       </Stack>
 
       <PufziButton
-        label={t('common.buttons.continue')}
+        label={t('buttons.createAccount')}
         fullWidth
-        onClick={handleNext}
+        onClick={handleRegister}
         sx={{
           fontSize: 17,
         }}

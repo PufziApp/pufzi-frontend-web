@@ -24,6 +24,7 @@ import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   const { t } = useTranslation(['LandingPage', 'Common'])
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleCloseMenu = () => {
@@ -74,10 +75,19 @@ export const Navbar = () => {
                 lg: '76px !important',
               },
 
-              display: 'flex',
+              display: 'grid',
+
+              gridTemplateColumns: {
+                xs: '1fr auto',
+                md: 'auto 1fr auto',
+              },
+
               alignItems: 'center',
-              justifyContent: 'space-between',
-              position: 'relative',
+
+              columnGap: {
+                md: 2,
+                lg: 3,
+              },
             }}
           >
             {/* LOGO */}
@@ -168,8 +178,9 @@ export const Navbar = () => {
             <Stack
               direction="row"
               spacing={{
-                md: 2,
-                lg: 4,
+                md: 1.5,
+                lg: 2.5,
+                xl: 4,
               }}
               sx={{
                 display: {
@@ -177,21 +188,14 @@ export const Navbar = () => {
                   md: 'flex',
                 },
 
-                position: {
-                  md: 'static',
-                  lg: 'absolute',
-                },
-
-                left: {
-                  lg: '50%',
-                },
-
-                transform: {
-                  lg: 'translateX(-50%)',
-                },
-
                 alignItems: 'center',
-                whiteSpace: 'nowrap',
+                justifyContent: 'center',
+
+                minWidth: 0,
+
+                '& > *': {
+                  whiteSpace: 'nowrap',
+                },
               }}
             >
               {MENU_OPTIONS.map((item) => (
@@ -203,8 +207,9 @@ export const Navbar = () => {
             <Stack
               direction="row"
               spacing={{
-                md: 0.7,
-                lg: 2,
+                md: 0.5,
+                lg: 0.8,
+                xl: 1.5,
               }}
               sx={{
                 display: {
@@ -213,6 +218,7 @@ export const Navbar = () => {
                 },
 
                 alignItems: 'center',
+                justifyContent: 'flex-end',
                 flexShrink: 0,
               }}
             >
@@ -226,25 +232,78 @@ export const Navbar = () => {
                 sx={{
                   color: 'text.primary',
                   textTransform: 'none',
+
                   fontSize: {
-                    md: 14,
-                    lg: 16,
+                    md: 13,
+                    lg: 14,
+                    xl: 16,
                   },
+
                   fontWeight: 600,
+
                   px: {
-                    md: 1,
-                    lg: 1.5,
+                    md: 0.7,
+                    lg: 1,
+                    xl: 1.5,
                   },
+
                   minWidth: 'auto',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {t('Common:login')}
               </Button>
 
-              <PufziButton label={t('Common:register')} component={Link} to="/register" />
+              <PufziButton
+                label={t('Common:clientRegister')}
+                component={Link}
+                to="/client-register"
+                sx={{
+                  whiteSpace: 'nowrap',
+                  px: {
+                    md: 1.5,
+                    lg: 2,
+                    xl: 2.5,
+                  },
+                  fontSize: {
+                    md: 12,
+                    lg: 13,
+                    xl: 14,
+                  },
+                  bgcolor: 'primary.light',
+                  color: 'secondary.contrastText',
+                  '&:hover': {
+                    bgcolor: 'primary.main',
+                    color: 'primary.contrastText',
+                    borderColor: 'primary.main',
+                    transform: 'translateY(-2px)',
+
+                    boxShadow: (theme) => `0 8px 18px ${theme.palette.action.selected}`,
+                  },
+                }}
+              />
+
+              <PufziButton
+                label={t('Common:businessRegister')}
+                component={Link}
+                to="/register"
+                sx={{
+                  whiteSpace: 'nowrap',
+                  px: {
+                    md: 1.5,
+                    lg: 2,
+                    xl: 2.5,
+                  },
+                  fontSize: {
+                    md: 12,
+                    lg: 13,
+                    xl: 14,
+                  },
+                }}
+              />
             </Stack>
 
-            {/* MOBILE / TABLET */}
+            {/* MOBILE */}
             <Stack
               direction="row"
               spacing={0.5}
@@ -255,9 +314,9 @@ export const Navbar = () => {
                 },
 
                 alignItems: 'center',
+                justifyContent: 'flex-end',
               }}
             >
-              {/* TABLET */}
               <Box
                 sx={{
                   display: {
@@ -332,7 +391,13 @@ export const Navbar = () => {
           }}
         >
           {/* HEADER DRAWER */}
-          <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
+          <Stack
+            direction="row"
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
             <Stack
               direction="row"
               spacing={0.8}
@@ -425,12 +490,14 @@ export const Navbar = () => {
                 xs: 'flex',
                 sm: 'none',
               },
+
               mb: 2.5,
               alignItems: 'center',
               justifyContent: 'space-between',
             }}
           >
             <LanguageSwitcher />
+
             <ThemeSwitcher />
           </Stack>
 
@@ -442,7 +509,10 @@ export const Navbar = () => {
             }}
           >
             <Button
+              component={Link}
+              to="/login"
               fullWidth
+              onClick={handleCloseMenu}
               sx={{
                 color: 'text.primary',
                 textTransform: 'none',
@@ -454,16 +524,30 @@ export const Navbar = () => {
               {t('Common:login')}
             </Button>
 
-            <Box
+            <Stack
+              spacing={1.5}
               sx={{
                 width: '100%',
+
                 '& > *': {
                   width: '100%',
                 },
               }}
             >
-              <PufziButton label={t('Common:register')} to="/register" />
-            </Box>
+              <PufziButton
+                label={t('Common:clientRegister')}
+                component={Link}
+                to="/client-register"
+                onClick={handleCloseMenu}
+              />
+
+              <PufziButton
+                label={t('Common:businessRegister')}
+                component={Link}
+                to="/register"
+                onClick={handleCloseMenu}
+              />
+            </Stack>
           </Stack>
         </Box>
       </Drawer>

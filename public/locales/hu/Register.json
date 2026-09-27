@@ -1,0 +1,90 @@
+{
+  "common": {
+    "buttons": {
+      "back": "← Vissza",
+      "continue": "Tovább →"
+    },
+    "fields": {
+      "confirmPassword": "Jelszó megerősítése",
+      "email": "E-mail",
+      "password": "Jelszó",
+      "phone": "Telefonszám"
+    }
+  },
+  "personalInformationStep": {
+    "fields": {
+      "firstName": "Keresztnév",
+      "lastName": "Vezetéknév"
+    },
+    "formSubtitle": "Adj meg néhány adatot magadról, hogy létrehozhassuk a Pufzi-fiókodat.",
+    "formTitle": "Adataid"
+  },
+  "planStep": {
+    "dialog": {
+      "close": "Bezárás",
+      "description": "Minden funkció, amire szükséged van a szalonod kezeléséhez, egyetlen csomagban.",
+      "title": "Minden, amit a csomag tartalmaz",
+      "trialDescription": "Próbáld ki az összes funkciót fizetés előtt."
+    },
+    "formSubtitle": "Egy teljes körű csomag modern és szervezett működésre törekvő szalonok számára.",
+    "formTitle": "Válaszd ki a csomagodat",
+    "free": "7 nap ingyen",
+    "plan": {
+      "allFeatures": "Minden funkciót tartalmaz",
+      "card": {
+        "benefits": {
+          "description": "Fedezd fel, mit tartalmaz a Pufzi PRO",
+          "title": "Összes előny megtekintése"
+        },
+        "subtitle": "A próbaidőszak alatt korlátozások nélkül hozzáférsz a Pufzi PRO összes funkciójához."
+      },
+      "free": "az első 7 nap ingyenes",
+      "month": "/hónap",
+      "price": "200 RON",
+      "shortTitle": "PRO",
+      "subtitle": "Minden, amire a szalonodnak szüksége van",
+      "title": "Pufzi PRO"
+    }
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Már van fiókod?",
+    "backToSite": "← Vissza az oldalra",
+    "businessAccount": "Üzleti fiók",
+    "login": "Bejelentkezés",
+    "steps": {
+      "personalInformation": "Személyes adatok",
+      "plan": "Csomag",
+      "salon": "Szalon",
+      "summary": "Összegzés"
+    }
+  },
+  "salonInformationStep": {
+    "fields": {
+      "address": "Cím",
+      "city": "Város",
+      "county": "Megye",
+      "postalCode": "Irányítószám",
+      "salonName": "Szalon neve"
+    },
+    "formSubtitle": "Add meg a szalonod legfontosabb adatait.",
+    "formTitle": "A szalonodról"
+  },
+  "summaryStep": {
+    "activation": {
+      "description": "A fiók létrehozása után egy megerősítő linket tartalmazó e-mailt kapsz. Nyisd meg a linket a Pufzi-fiókod aktiválásához.",
+      "title": "Aktiváld a fiókodat az e-mail-címed megerősítésével"
+    },
+    "columns": {
+      "personalInformation": "Személyes adatok",
+      "salonInformation": "Szalon adatai",
+      "selectedPlan": "Kiválasztott csomag"
+    },
+    "createAccount": "Fiók létrehozása 🎉",
+    "formSubtitle": "Ellenőrizd az adatokat a fiók létrehozása előtt.",
+    "formTitle": "Minden készen áll! 🐾",
+    "labels": {
+      "name": "Név",
+      "salon": "Szalon"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 {
   "appName": "Pufzi",
+  "businessRegister": "Create business account",
+  "clientRegister": "Create client account",
   "login": "Login",
   "logout": "Logout",
   "navbar": {
@@ -13,6 +15,5 @@
       "light": "Light",
       "title": "Mode"
     }
-  },
-  "register": "Register"
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "buttons": {
+    "createAccount": "Fiók létrehozása 🎉"
+  },
+  "common": {
+    "fields": {
+      "confirmPassword": "Jelszó megerősítése",
+      "email": "E-mail",
+      "password": "Jelszó"
+    },
+    "passwordVisibility": {
+      "hide": "Jelszó elrejtése",
+      "show": "Jelszó megjelenítése"
+    }
+  },
+  "personalInformation": {
+    "fields": {
+      "firstName": "Keresztnév",
+      "lastName": "Vezetéknév"
+    },
+    "formSubtitle": "Add meg az adataidat, hogy elkezdhesd használni a Pufzit.",
+    "formTitle": "Hozd létre a fiókodat"
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Már van fiókod?",
+    "backToSite": "← Vissza az oldalra",
+    "clientAccount": "Ügyfélfiók",
+    "login": "Bejelentkezés"
+  }
+}

@@ -1,5 +1,7 @@
 {
   "appName": "Pufzi",
+  "businessRegister": "Üzleti fiók létrehozása",
+  "clientRegister": "Ügyfélfiók létrehozása",
   "login": "Bejelentkezés",
   "logout": "Kijelentkezés",
   "navbar": {
@@ -13,6 +15,5 @@
       "light": "Világos",
       "title": "Mód"
     }
-  },
-  "register": "Regisztráció"
+  }
 }

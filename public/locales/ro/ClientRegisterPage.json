@@ -1,0 +1,30 @@
+{
+  "buttons": {
+    "createAccount": "Creează contul 🎉"
+  },
+  "common": {
+    "fields": {
+      "confirmPassword": "Confirmă parola",
+      "email": "Email",
+      "password": "Parolă"
+    },
+    "passwordVisibility": {
+      "hide": "Ascunde parola",
+      "show": "Afișează parola"
+    }
+  },
+  "personalInformation": {
+    "fields": {
+      "firstName": "Prenume",
+      "lastName": "Nume"
+    },
+    "formSubtitle": "Completează datele tale pentru a începe să folosești Pufzi.",
+    "formTitle": "Creează-ți contul"
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Ai deja cont?",
+    "backToSite": "← Înapoi la site",
+    "clientAccount": "Cont client",
+    "login": "Autentifică-te"
+  }
+}

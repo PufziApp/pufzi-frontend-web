@@ -1,88 +1,44 @@
 import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
-import { Chip, Divider, Stack, Step, StepLabel, Stepper, Typography } from '@mui/material'
+import { Chip, Divider, Stack, Typography } from '@mui/material'
+
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded'
 
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
+import { ClientPersonalInformation } from './ClientPersonalInformation'
 import { PufziFormCard } from '../../../../../components/PufziFormCard/PufziFormCard'
-import { PufziFormHeader } from '../../../../../components/PufziFormHeader/PufziFormHeader'
 import { PufziLinkButton } from '../../../../../components/PufziLinkButton/PufziLinkButton'
+import { PufziFormHeader } from '../../../../../components/PufziFormHeader/PufziFormHeader'
 
-import { PersonalInformationStep } from './components/PersonalInformationStep'
-import { SalonInformationStep } from './components/SalonInformationStep'
-import { PlanStep } from './components/PlanStep/PlanStep'
-import { SummaryStep } from './components/SummaryStep'
-import StorefrontRoundedIcon from '@mui/icons-material/StorefrontRounded'
-
-export type RegisterFormData = {
+export type ClientRegisterFormData = {
   firstName: string
   lastName: string
-
   email: string
-
   password: string
   confirmPassword: string
-
-  salonName: string
-  phone: string
-
-  address: string
-  city: string
-  county: string
-  postalCode: string
-
-  plan: 'pro'
 }
 
-const STEPS = [
-  'registerForm.steps.personalInformation',
-  'registerForm.steps.salon',
-  'registerForm.steps.plan',
-  'registerForm.steps.summary',
-] as const
+export const ClientRegisterForm = () => {
+  const { t } = useTranslation('ClientRegisterPage')
 
-export const RegisterForm = () => {
-  const { t } = useTranslation('Register')
-
-  const [activeStep, setActiveStep] = useState(0)
-
-  const [formData, setFormData] = useState<RegisterFormData>({
+  const [formData, setFormData] = useState<ClientRegisterFormData>({
     firstName: '',
     lastName: '',
-
     email: '',
-
     password: '',
     confirmPassword: '',
-
-    salonName: '',
-    phone: '',
-
-    address: '',
-    city: '',
-    county: '',
-    postalCode: '',
-
-    plan: 'pro',
   })
 
   const handleChange =
-    (field: keyof RegisterFormData) => (event: ChangeEvent<HTMLInputElement>) => {
+    (field: keyof ClientRegisterFormData) => (event: ChangeEvent<HTMLInputElement>) => {
       setFormData((previous) => ({
         ...previous,
         [field]: event.target.value,
       }))
     }
-
-  const handleNext = () => {
-    setActiveStep((previous) => previous + 1)
-  }
-
-  const handleBack = () => {
-    setActiveStep((previous) => previous - 1)
-  }
 
   const handleRegister = () => {
     console.log(formData)
@@ -137,6 +93,7 @@ export const RegisterForm = () => {
 
           <PufziFormHeader />
 
+          {/* CLIENT CHIP */}
           <Stack
             sx={{
               alignItems: 'center',
@@ -144,13 +101,13 @@ export const RegisterForm = () => {
           >
             <Chip
               icon={
-                <StorefrontRoundedIcon
+                <PersonRoundedIcon
                   sx={{
                     fontSize: '16px',
                   }}
                 />
               }
-              label={t('registerForm.businessAccount')}
+              label={t('registerForm.clientAccount')}
               sx={{
                 height: 42,
 
@@ -189,61 +146,6 @@ export const RegisterForm = () => {
             />
           </Stack>
 
-          <Stepper
-            activeStep={activeStep}
-            alternativeLabel
-            sx={{
-              px: {
-                xs: 0,
-                sm: 1,
-              },
-
-              '& .MuiStepLabel-label': {
-                color: 'text.secondary',
-                fontWeight: 600,
-                fontSize: 12,
-                mt: 0.5,
-              },
-
-              '& .MuiStepLabel-label.Mui-active': {
-                color: 'primary.main',
-                fontWeight: 700,
-              },
-
-              '& .MuiStepLabel-label.Mui-completed': {
-                color: 'success.main',
-              },
-
-              '& .MuiStepIcon-root': {
-                color: 'secondary.main',
-                fontSize: 30,
-              },
-
-              '& .MuiStepIcon-root.Mui-active': {
-                color: 'primary.main',
-              },
-
-              '& .MuiStepIcon-root.Mui-completed': {
-                color: 'success.main',
-              },
-
-              '& .MuiStepConnector-line': {
-                borderColor: 'divider',
-                borderTopWidth: 2,
-              },
-
-              '& .MuiStepConnector-root.Mui-completed .MuiStepConnector-line': {
-                borderColor: 'success.main',
-              },
-            }}
-          >
-            {STEPS.map((step) => (
-              <Step key={step}>
-                <StepLabel>{t(step)}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-
           <Divider />
         </Stack>
 
@@ -251,41 +153,17 @@ export const RegisterForm = () => {
         <Stack
           sx={{
             flex: 1,
-
             minHeight: 0,
-
             overflowY: 'auto',
-
             pt: 3,
             pr: 0.5,
           }}
         >
-          {activeStep === 0 && (
-            <PersonalInformationStep
-              formData={formData}
-              handleChange={handleChange}
-              handleNext={handleNext}
-            />
-          )}
-
-          {activeStep === 1 && (
-            <SalonInformationStep
-              formData={formData}
-              handleChange={handleChange}
-              handleBack={handleBack}
-              handleNext={handleNext}
-            />
-          )}
-
-          {activeStep === 2 && <PlanStep handleBack={handleBack} handleNext={handleNext} />}
-
-          {activeStep === 3 && (
-            <SummaryStep
-              formData={formData}
-              handleBack={handleBack}
-              handleRegister={handleRegister}
-            />
-          )}
+          <ClientPersonalInformation
+            formData={formData}
+            handleChange={handleChange}
+            handleRegister={handleRegister}
+          />
         </Stack>
 
         {/* LOGIN */}
@@ -304,6 +182,7 @@ export const RegisterForm = () => {
           <Typography
             sx={{
               color: 'text.secondary',
+
               fontWeight: 500,
             }}
           >
@@ -316,6 +195,7 @@ export const RegisterForm = () => {
             label={t('registerForm.login')}
             sx={{
               color: 'primary.main',
+
               fontWeight: 700,
             }}
           />

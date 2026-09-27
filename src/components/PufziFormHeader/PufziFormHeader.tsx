@@ -37,11 +37,16 @@ export const PufziFormHeader = () => {
       </Box>
 
       <Typography
+        variant="h4"
         sx={{
-          fontSize: 22,
           fontWeight: 800,
           lineHeight: 1,
-          color: 'text.secondary',
+
+          color: (theme) =>
+            theme.palette.mode === 'dark'
+              ? theme.palette.text.primary
+              : theme.palette.text.secondary,
+
           fontFamily: '"Nunito", sans-serif',
         }}
       >

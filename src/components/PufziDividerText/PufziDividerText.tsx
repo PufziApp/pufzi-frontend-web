@@ -14,7 +14,12 @@ export const PufziDividerText = ({ text }: PufziDividerTextProps) => {
         alignItems: 'center',
       }}
     >
-      <Divider sx={{ flex: 1 }} />
+      <Divider
+        sx={{
+          flex: 1,
+          borderColor: 'divider',
+        }}
+      />
 
       <Typography
         variant="body1"
@@ -26,7 +31,12 @@ export const PufziDividerText = ({ text }: PufziDividerTextProps) => {
         {text}
       </Typography>
 
-      <Divider sx={{ flex: 1 }} />
+      <Divider
+        sx={{
+          flex: 1,
+          borderColor: 'divider',
+        }}
+      />
     </Stack>
   )
 }

@@ -1,0 +1,30 @@
+{
+  "buttons": {
+    "createAccount": "Create account 🎉"
+  },
+  "common": {
+    "fields": {
+      "confirmPassword": "Confirm password",
+      "email": "Email",
+      "password": "Password"
+    },
+    "passwordVisibility": {
+      "hide": "Hide password",
+      "show": "Show password"
+    }
+  },
+  "personalInformation": {
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    },
+    "formSubtitle": "Enter your details to start using Pufzi.",
+    "formTitle": "Create your account"
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Already have an account?",
+    "backToSite": "← Back to site",
+    "clientAccount": "Client account",
+    "login": "Log in"
+  }
+}

@@ -23,7 +23,8 @@ export const PufziRememberMe = ({
           size="small"
           {...checkboxProps}
           sx={{
-            color: 'divider',
+            color: 'text.secondary',
+
             p: 0.5,
 
             '&.Mui-checked': {

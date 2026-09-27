@@ -1,10 +1,13 @@
 {
   "backToWebsite": "← Înapoi la site",
-  "title": "Bine ai revenit! 🐾",
-  "subtitle": "Intră în cont pentru a continua să ai grijă de prietenii tăi blănoși.",
   "continueWith": "sau continuă cu",
+  "createBusinessAccount": "Cont business",
+  "createClientAccount": "Cont client",
   "email": "Email",
+  "forgotPassword": "Ai uitat parola?",
+  "noAccount": "Nu ai încă un cont?",
   "password": "Parolă",
   "rememberMe": "Ține-mă minte",
-  "forgotPassword": "Ai uitat parola?"
+  "subtitle": "Intră în cont pentru a continua să ai grijă de prietenii tăi blănoși.",
+  "title": "Bine ai revenit! 🐾"
 }

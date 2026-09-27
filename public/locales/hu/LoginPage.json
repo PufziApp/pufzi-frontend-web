@@ -1,10 +1,13 @@
 {
   "backToWebsite": "← Vissza a weboldalra",
-  "title": "Üdv újra! 🐾",
-  "subtitle": "Jelentkezz be, hogy továbbra is gondoskodhass szőrös barátaidról.",
   "continueWith": "vagy folytasd ezzel",
+  "createBusinessAccount": "Üzleti fiók",
+  "createClientAccount": "Ügyfélfiók",
   "email": "E-mail",
+  "forgotPassword": "Elfelejtetted a jelszavad?",
+  "noAccount": "Még nincs fiókod?",
   "password": "Jelszó",
   "rememberMe": "Emlékezz rám",
-  "forgotPassword": "Elfelejtetted a jelszavad?"
+  "subtitle": "Jelentkezz be, hogy továbbra is gondoskodhass szőrös barátaidról.",
+  "title": "Üdv újra! 🐾"
 }

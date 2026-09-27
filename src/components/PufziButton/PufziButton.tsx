@@ -20,10 +20,14 @@ export const PufziButton: FC<PufziButtonType> = ({
       sx={{
         bgcolor: 'primary.main',
         color: 'primary.contrastText',
+
         textTransform: 'none',
+
         borderRadius: 1,
+
         px: 2.5,
         py: 1.2,
+
         fontWeight: 700,
 
         border: '1px solid',
@@ -34,9 +38,16 @@ export const PufziButton: FC<PufziButtonType> = ({
         transition: 'all 0.2s ease',
 
         '&:hover': {
-          bgcolor: 'primary.light',
-          color: 'text.primary',
+          bgcolor: (theme) =>
+            theme.palette.mode === 'dark'
+              ? theme.palette.action.selected
+              : theme.palette.primary.light,
+
+          color: (theme) =>
+            theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.text.primary,
+
           borderColor: 'primary.main',
+
           transform: 'translateY(-2px)',
 
           boxShadow: (theme) => `0 8px 18px ${theme.palette.action.selected}`,
@@ -44,6 +55,7 @@ export const PufziButton: FC<PufziButtonType> = ({
 
         '&:active': {
           transform: 'translateY(0)',
+
           boxShadow: (theme) => `0 3px 8px ${theme.palette.action.hover}`,
         },
 

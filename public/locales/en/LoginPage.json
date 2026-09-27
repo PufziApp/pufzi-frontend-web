@@ -1,10 +1,13 @@
 {
   "backToWebsite": "← Back to website",
-  "title": "Welcome back! 🐾",
-  "subtitle": "Sign in to continue caring for your furry friends.",
   "continueWith": "or continue with",
+  "createBusinessAccount": "Business account",
+  "createClientAccount": "Client account",
   "email": "Email",
+  "forgotPassword": "Forgot password?",
+  "noAccount": "Don't have an account yet?",
   "password": "Password",
   "rememberMe": "Remember me",
-  "forgotPassword": "Forgot password?"
+  "subtitle": "Sign in to continue caring for your furry friends.",
+  "title": "Welcome back! 🐾"
 }

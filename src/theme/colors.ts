@@ -56,9 +56,9 @@ export const orangeColors = {
     },
 
     background: {
-      default: '#1C1410',
-      paper: '#261C14',
-      main: '#000000',
+      default: '#2A1E17',
+      paper: '#33241B',
+      main: '#3A281E',
     },
 
     text: {
@@ -149,9 +149,9 @@ export const sageColors = {
     },
 
     background: {
-      default: '#1A2420',
-      paper: '#1F2E28',
-      main: '#000000',
+      default: '#354A41',
+      paper: '#3C5147',
+      main: '#455B50',
     },
 
     text: {

@@ -19,13 +19,17 @@ export const PufziLinkButton: FC<PufziLinkButtonType> = ({
       variant={variant}
       sx={{
         color: 'text.secondary',
+
         textTransform: 'none',
+
         fontSize: 16,
         fontWeight: 600,
+
         '&:hover': {
-          bgcolor: 'transparent',
-          color: 'text.primary',
+          bgcolor: 'action.hover',
+          color: 'primary.main',
         },
+
         ...sx,
       }}
     >

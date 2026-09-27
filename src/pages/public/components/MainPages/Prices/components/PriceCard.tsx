@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { PacketInformation } from './PacketInformation'
 import { PRICES_INFO } from '../types/prices.info'
 import { PufziButton } from '../../../../../../components/PufziButton/PufziButton'
+import { Link } from 'react-router-dom'
 
 export const PriceCard = () => {
   const { t } = useTranslation('Prices')
@@ -90,6 +91,8 @@ export const PriceCard = () => {
 
       <Stack sx={{ mt: 2 }}>
         <PufziButton
+          component={Link}
+          to="/register"
           label={t('priceCard.button')}
           sx={{
             bgcolor: 'background.paper',

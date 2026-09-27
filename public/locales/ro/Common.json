@@ -1,5 +1,7 @@
 {
   "appName": "Pufzi",
+  "businessRegister": "Creează cont business",
+  "clientRegister": "Creează cont client",
   "login": "Autentificare",
   "logout": "Deconectare",
   "navbar": {
@@ -13,6 +15,5 @@
       "light": "Luminos",
       "title": "Mod"
     }
-  },
-  "register": "Creează cont"
+  }
 }

@@ -5,6 +5,7 @@ import { LandingPage } from '../pages/public/LandingPage'
 import { PageNotFound } from '../pages/public/components/PageNotFound/PageNotFound'
 import { LoginPage } from '../pages/public/components/LoginPage/LoginPage'
 import { RegisterPage } from '../pages/public/components/RegisterPage/RegisterPage'
+import { ClientRegisterPage } from '../pages/public/components/ClientRegisterPage/ClientRegisterPage'
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
   {
     path: '/login',
     element: <LoginPage />,
+  },
+  {
+    path: '/client-register',
+    element: <ClientRegisterPage />,
   },
   {
     path: '/register',
