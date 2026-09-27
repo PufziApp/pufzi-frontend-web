@@ -6,6 +6,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 import appleStoreButton from '../../../../../../assets/appleStoreButton.png'
 import googlePlayButton from '../../../../../../assets/googlePlayButton.png'
+import { Link } from 'react-router-dom'
 
 export const GeneralInformation = () => {
   const { t } = useTranslation('Hero')
@@ -37,6 +38,8 @@ export const GeneralInformation = () => {
 
       <Stack direction="row" spacing={2}>
         <PufziButton
+          component={Link}
+          to="register"
           label={t('startNowText')}
           sx={{
             borderRadius: '15px',
