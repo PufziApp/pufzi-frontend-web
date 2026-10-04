@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import type { ChangeEvent } from 'react'
+import { useState, type ChangeEvent } from 'react'
 
 import { Chip, Divider, Stack, Typography } from '@mui/material'
 
@@ -8,18 +7,18 @@ import PersonRoundedIcon from '@mui/icons-material/PersonRounded'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-import { ClientPersonalInformation } from './ClientPersonalInformation'
+import {
+  ClientPersonalInformation,
+  type ClientRegisterFormErrors,
+} from './ClientPersonalInformation'
+
 import { PufziFormCard } from '../../../../../components/PufziFormCard/PufziFormCard'
 import { PufziLinkButton } from '../../../../../components/PufziLinkButton/PufziLinkButton'
 import { PufziFormHeader } from '../../../../../components/PufziFormHeader/PufziFormHeader'
-
-export type ClientRegisterFormData = {
-  firstName: string
-  lastName: string
-  email: string
-  password: string
-  confirmPassword: string
-}
+import {
+  clientRegisterSchema,
+  type ClientRegisterFormData,
+} from '../types/client-register-page.types'
 
 export const ClientRegisterForm = () => {
   const { t } = useTranslation('ClientRegisterPage')
@@ -32,16 +31,53 @@ export const ClientRegisterForm = () => {
     confirmPassword: '',
   })
 
+  const [formErrors, setFormErrors] = useState<ClientRegisterFormErrors>({})
+
   const handleChange =
     (field: keyof ClientRegisterFormData) => (event: ChangeEvent<HTMLInputElement>) => {
+      const value = event.target.value
+
       setFormData((previous) => ({
         ...previous,
-        [field]: event.target.value,
+        [field]: value,
       }))
+
+      setFormErrors((previous) => ({
+        ...previous,
+        [field]: undefined,
+      }))
+
+      if (field === 'password') {
+        setFormErrors((previous) => ({
+          ...previous,
+          password: undefined,
+          confirmPassword: undefined,
+        }))
+      }
     }
 
   const handleRegister = () => {
-    console.log(formData)
+    const result = clientRegisterSchema.safeParse(formData)
+
+    if (!result.success) {
+      const errors: ClientRegisterFormErrors = {}
+
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof ClientRegisterFormData
+
+        if (field && !errors[field]) {
+          errors[field] = issue.message
+        }
+      })
+
+      setFormErrors(errors)
+
+      return
+    }
+
+    setFormErrors({})
+
+    console.log('Valid register data:', result.data)
   }
 
   return (
@@ -154,13 +190,29 @@ export const ClientRegisterForm = () => {
           sx={{
             flex: 1,
             minHeight: 0,
+
             overflowY: 'auto',
+
             pt: 3,
             pr: 0.5,
+
+            '&::-webkit-scrollbar': {
+              width: 5,
+            },
+
+            '&::-webkit-scrollbar-thumb': {
+              bgcolor: 'divider',
+              borderRadius: 999,
+            },
+
+            '&::-webkit-scrollbar-track': {
+              bgcolor: 'transparent',
+            },
           }}
         >
           <ClientPersonalInformation
             formData={formData}
+            formErrors={formErrors}
             handleChange={handleChange}
             handleRegister={handleRegister}
           />

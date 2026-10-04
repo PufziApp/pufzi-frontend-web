@@ -13,6 +13,15 @@
       "show": "Jelszó megjelenítése"
     }
   },
+  "passwordRequirements": {
+    "minLength": "Legalább 8 karakter",
+    "number": "Legalább egy szám",
+    "passwordsDoNotMatch": "A jelszavak nem egyeznek",
+    "passwordsMatch": "A jelszavak megegyeznek",
+    "specialCharacter": "Legalább egy speciális karakter",
+    "title": "A jelszónak tartalmaznia kell:",
+    "uppercase": "Legalább egy nagybetű"
+  },
   "personalInformation": {
     "fields": {
       "firstName": "Keresztnév",
@@ -26,5 +35,20 @@
     "backToSite": "← Vissza az oldalra",
     "clientAccount": "Ügyfélfiók",
     "login": "Bejelentkezés"
+  },
+  "validation": {
+    "confirmPasswordRequired": "Erősítsd meg a jelszavad.",
+    "emailInvalid": "Adj meg egy érvényes e-mail címet.",
+    "emailRequired": "Az e-mail cím megadása kötelező.",
+    "firstNameMinLength": "A keresztnévnek legalább 2 karakterből kell állnia.",
+    "firstNameRequired": "A keresztnév megadása kötelező.",
+    "lastNameMinLength": "A vezetéknévnek legalább 2 karakterből kell állnia.",
+    "lastNameRequired": "A vezetéknév megadása kötelező.",
+    "passwordMinLength": "A jelszónak legalább 8 karakterből kell állnia.",
+    "passwordNumber": "A jelszónak tartalmaznia kell egy számot.",
+    "passwordRequired": "A jelszó megadása kötelező.",
+    "passwordsDoNotMatch": "A jelszavak nem egyeznek.",
+    "passwordSpecialCharacter": "A jelszónak tartalmaznia kell egy speciális karaktert.",
+    "passwordUppercase": "A jelszónak tartalmaznia kell egy nagybetűt."
   }
 }

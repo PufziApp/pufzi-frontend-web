@@ -13,6 +13,15 @@
       "show": "Show password"
     }
   },
+  "passwordRequirements": {
+    "minLength": "At least 8 characters",
+    "number": "At least one number",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordsMatch": "Passwords match",
+    "specialCharacter": "At least one special character",
+    "title": "Your password must contain:",
+    "uppercase": "At least one uppercase letter"
+  },
   "personalInformation": {
     "fields": {
       "firstName": "First name",
@@ -26,5 +35,20 @@
     "backToSite": "← Back to site",
     "clientAccount": "Client account",
     "login": "Log in"
+  },
+  "validation": {
+    "confirmPasswordRequired": "Please confirm your password.",
+    "emailInvalid": "Enter a valid email address.",
+    "emailRequired": "Email address is required.",
+    "firstNameMinLength": "First name must contain at least 2 characters.",
+    "firstNameRequired": "First name is required.",
+    "lastNameMinLength": "Last name must contain at least 2 characters.",
+    "lastNameRequired": "Last name is required.",
+    "passwordMinLength": "Password must contain at least 8 characters.",
+    "passwordNumber": "Password must contain a number.",
+    "passwordRequired": "Password is required.",
+    "passwordsDoNotMatch": "Passwords do not match.",
+    "passwordSpecialCharacter": "Password must contain a special character.",
+    "passwordUppercase": "Password must contain an uppercase letter."
   }
 }

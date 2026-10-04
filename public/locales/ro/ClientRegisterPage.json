@@ -13,6 +13,15 @@
       "show": "Afișează parola"
     }
   },
+  "passwordRequirements": {
+    "minLength": "Minimum 8 caractere",
+    "number": "Cel puțin o cifră",
+    "passwordsDoNotMatch": "Parolele nu coincid",
+    "passwordsMatch": "Parolele coincid",
+    "specialCharacter": "Cel puțin un caracter special",
+    "title": "Parola trebuie să conțină:",
+    "uppercase": "Cel puțin o literă mare"
+  },
   "personalInformation": {
     "fields": {
       "firstName": "Prenume",
@@ -26,5 +35,20 @@
     "backToSite": "← Înapoi la site",
     "clientAccount": "Cont client",
     "login": "Autentifică-te"
+  },
+  "validation": {
+    "confirmPasswordRequired": "Confirmarea parolei este obligatorie.",
+    "emailInvalid": "Introdu o adresă de email validă.",
+    "emailRequired": "Adresa de email este obligatorie.",
+    "firstNameMinLength": "Prenumele trebuie să aibă minimum 2 caractere.",
+    "firstNameRequired": "Prenumele este obligatoriu.",
+    "lastNameMinLength": "Numele trebuie să aibă minimum 2 caractere.",
+    "lastNameRequired": "Numele este obligatoriu.",
+    "passwordMinLength": "Parola trebuie să aibă minimum 8 caractere.",
+    "passwordNumber": "Parola trebuie să conțină o cifră.",
+    "passwordRequired": "Parola este obligatorie.",
+    "passwordsDoNotMatch": "Parolele nu coincid.",
+    "passwordSpecialCharacter": "Parola trebuie să conțină un caracter special.",
+    "passwordUppercase": "Parola trebuie să conțină o literă mare."
   }
 }
