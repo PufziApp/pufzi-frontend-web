@@ -9,5 +9,10 @@
   "password": "Jelszó",
   "rememberMe": "Emlékezz rám",
   "subtitle": "Jelentkezz be, hogy továbbra is gondoskodhass szőrös barátaidról.",
-  "title": "Üdv újra! 🐾"
+  "title": "Üdv újra! 🐾",
+  "validation": {
+    "emailInvalid": "Adj meg egy érvényes e-mail címet.",
+    "emailRequired": "Az e-mail cím megadása kötelező.",
+    "passwordRequired": "A jelszó megadása kötelező."
+  }
 }

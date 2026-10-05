@@ -3,6 +3,8 @@ import type { ChangeEvent } from 'react'
 
 import { Chip, Divider, Stack, Step, StepLabel, Stepper, Typography } from '@mui/material'
 
+import StorefrontRoundedIcon from '@mui/icons-material/StorefrontRounded'
+
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -10,31 +12,21 @@ import { PufziFormCard } from '../../../../../components/PufziFormCard/PufziForm
 import { PufziFormHeader } from '../../../../../components/PufziFormHeader/PufziFormHeader'
 import { PufziLinkButton } from '../../../../../components/PufziLinkButton/PufziLinkButton'
 
-import { PersonalInformationStep } from './components/PersonalInformationStep'
+import {
+  personalInformationSchema,
+  salonInformationSchema,
+  registerSchema,
+  type RegisterFormData,
+} from '../types/register-page.types'
+
+import {
+  PersonalInformationStep,
+  type RegisterFormErrors,
+} from './components/PersonalInformationStep'
+
 import { SalonInformationStep } from './components/SalonInformationStep'
 import { PlanStep } from './components/PlanStep/PlanStep'
 import { SummaryStep } from './components/SummaryStep'
-import StorefrontRoundedIcon from '@mui/icons-material/StorefrontRounded'
-
-export type RegisterFormData = {
-  firstName: string
-  lastName: string
-
-  email: string
-
-  password: string
-  confirmPassword: string
-
-  salonName: string
-  phone: string
-
-  address: string
-  city: string
-  county: string
-  postalCode: string
-
-  plan: 'pro'
-}
 
 const STEPS = [
   'registerForm.steps.personalInformation',
@@ -68,15 +60,101 @@ export const RegisterForm = () => {
     plan: 'pro',
   })
 
+  const [formErrors, setFormErrors] = useState<RegisterFormErrors>({})
+
   const handleChange =
     (field: keyof RegisterFormData) => (event: ChangeEvent<HTMLInputElement>) => {
+      const value = event.target.value
+
       setFormData((previous) => ({
         ...previous,
-        [field]: event.target.value,
+        [field]: value,
       }))
+
+      setFormErrors((previous) => ({
+        ...previous,
+        [field]: undefined,
+      }))
+
+      if (field === 'password') {
+        setFormErrors((previous) => ({
+          ...previous,
+          password: undefined,
+          confirmPassword: undefined,
+        }))
+      }
     }
 
+  const handlePhoneChange = (phone: string) => {
+    setFormData((previous) => ({
+      ...previous,
+      phone,
+    }))
+
+    setFormErrors((previous) => ({
+      ...previous,
+      phone: undefined,
+    }))
+  }
+
   const handleNext = () => {
+    if (activeStep === 0) {
+      const result = personalInformationSchema.safeParse({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password,
+        confirmPassword: formData.confirmPassword,
+      })
+
+      if (!result.success) {
+        const errors: RegisterFormErrors = {}
+
+        result.error.issues.forEach((issue) => {
+          const field = issue.path[0] as keyof RegisterFormData
+
+          if (field && !errors[field]) {
+            errors[field] = issue.message
+          }
+        })
+
+        setFormErrors(errors)
+
+        return
+      }
+
+      setFormErrors({})
+    }
+
+    if (activeStep === 1) {
+      const result = salonInformationSchema.safeParse({
+        salonName: formData.salonName,
+        phone: formData.phone,
+        address: formData.address,
+        city: formData.city,
+        county: formData.county,
+        postalCode: formData.postalCode,
+      })
+
+      if (!result.success) {
+        const errors: RegisterFormErrors = {}
+
+        result.error.issues.forEach((issue) => {
+          const field = issue.path[0] as keyof RegisterFormData
+
+          if (field && !errors[field]) {
+            errors[field] = issue.message
+          }
+        })
+
+        setFormErrors(errors)
+
+        return
+      }
+
+      setFormErrors({})
+    }
+
     setActiveStep((previous) => previous + 1)
   }
 
@@ -85,7 +163,29 @@ export const RegisterForm = () => {
   }
 
   const handleRegister = () => {
-    console.log(formData)
+    const result = registerSchema.safeParse(formData)
+
+    if (!result.success) {
+      const errors: RegisterFormErrors = {}
+
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof RegisterFormData
+
+        if (field && !errors[field]) {
+          errors[field] = issue.message
+        }
+      })
+
+      setFormErrors(errors)
+
+      console.log('Register validation errors:', errors)
+
+      return
+    }
+
+    setFormErrors({})
+
+    console.log('Valid business register:', result.data)
   }
 
   return (
@@ -258,11 +358,21 @@ export const RegisterForm = () => {
 
             pt: 3,
             pr: 0.5,
+
+            '&::-webkit-scrollbar': {
+              width: 5,
+            },
+
+            '&::-webkit-scrollbar-thumb': {
+              bgcolor: 'divider',
+              borderRadius: 999,
+            },
           }}
         >
           {activeStep === 0 && (
             <PersonalInformationStep
               formData={formData}
+              formErrors={formErrors}
               handleChange={handleChange}
               handleNext={handleNext}
             />
@@ -271,7 +381,9 @@ export const RegisterForm = () => {
           {activeStep === 1 && (
             <SalonInformationStep
               formData={formData}
+              formErrors={formErrors}
               handleChange={handleChange}
+              handlePhoneChange={handlePhoneChange}
               handleBack={handleBack}
               handleNext={handleNext}
             />

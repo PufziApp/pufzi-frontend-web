@@ -11,6 +11,15 @@
       "phone": "Telefonszám"
     }
   },
+  "passwordRequirements": {
+    "minLength": "Legalább 8 karakter",
+    "number": "Legalább egy szám",
+    "passwordsDoNotMatch": "A jelszavak nem egyeznek",
+    "passwordsMatch": "A jelszavak megegyeznek",
+    "specialCharacter": "Legalább egy speciális karakter",
+    "title": "A jelszónak tartalmaznia kell:",
+    "uppercase": "Legalább egy nagybetű"
+  },
   "personalInformationStep": {
     "fields": {
       "firstName": "Keresztnév",
@@ -86,5 +95,27 @@
       "name": "Név",
       "salon": "Szalon"
     }
+  },
+  "validation": {
+    "addressRequired": "A cím megadása kötelező.",
+    "cityRequired": "A város megadása kötelező.",
+    "confirmPasswordRequired": "A jelszó megerősítése kötelező.",
+    "countyRequired": "A megye megadása kötelező.",
+    "emailInvalid": "Adj meg egy érvényes e-mail címet.",
+    "emailRequired": "Az e-mail cím megadása kötelező.",
+    "firstNameMinLength": "A keresztnévnek legalább 2 karakterből kell állnia.",
+    "firstNameRequired": "A keresztnév megadása kötelező.",
+    "lastNameMinLength": "A vezetéknévnek legalább 2 karakterből kell állnia.",
+    "lastNameRequired": "A vezetéknév megadása kötelező.",
+    "passwordMinLength": "A jelszónak legalább 8 karakterből kell állnia.",
+    "passwordNumber": "A jelszónak tartalmaznia kell legalább egy számot.",
+    "passwordRequired": "A jelszó megadása kötelező.",
+    "passwordsDoNotMatch": "A jelszavak nem egyeznek.",
+    "passwordSpecialCharacter": "A jelszónak tartalmaznia kell legalább egy speciális karaktert.",
+    "passwordUppercase": "A jelszónak tartalmaznia kell legalább egy nagybetűt.",
+    "phoneInvalid": "Adj meg egy érvényes telefonszámot.",
+    "phoneRequired": "A telefonszám megadása kötelező.",
+    "postalCodeRequired": "Az irányítószám megadása kötelező.",
+    "salonNameRequired": "A szalon nevének megadása kötelező."
   }
 }

@@ -11,6 +11,15 @@
       "phone": "Phone"
     }
   },
+  "passwordRequirements": {
+    "minLength": "At least 8 characters",
+    "number": "At least one number",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordsMatch": "Passwords match",
+    "specialCharacter": "At least one special character",
+    "title": "Your password must contain:",
+    "uppercase": "At least one uppercase letter"
+  },
   "personalInformationStep": {
     "fields": {
       "firstName": "First name",
@@ -86,5 +95,27 @@
       "name": "Name",
       "salon": "Salon"
     }
+  },
+  "validation": {
+    "addressRequired": "Address is required.",
+    "cityRequired": "City is required.",
+    "confirmPasswordRequired": "Password confirmation is required.",
+    "countyRequired": "County is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "emailRequired": "Email address is required.",
+    "firstNameMinLength": "First name must contain at least 2 characters.",
+    "firstNameRequired": "First name is required.",
+    "lastNameMinLength": "Last name must contain at least 2 characters.",
+    "lastNameRequired": "Last name is required.",
+    "passwordMinLength": "Password must contain at least 8 characters.",
+    "passwordNumber": "Password must contain at least one number.",
+    "passwordRequired": "Password is required.",
+    "passwordsDoNotMatch": "Passwords do not match.",
+    "passwordSpecialCharacter": "Password must contain at least one special character.",
+    "passwordUppercase": "Password must contain at least one uppercase letter.",
+    "phoneInvalid": "Enter a valid phone number.",
+    "phoneRequired": "Phone number is required.",
+    "postalCodeRequired": "Postal code is required.",
+    "salonNameRequired": "Salon name is required."
   }
 }

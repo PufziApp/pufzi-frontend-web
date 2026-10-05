@@ -22,11 +22,62 @@ import { PufziDividerText } from '../../../../../../components/PufziDividerText/
 import { PufziFormSubtitle } from '../../../../../../components/PufziFormSubtitle/PufziFormSubtitle'
 import { PufziRememberMe } from '../../../../../../components/PufziRememberMe/PufziRememberMe'
 
+import { loginSchema, type LoginFormData, type LoginFormErrors } from '../../types/login-page.types'
+
 export const LoginForm = () => {
   const { t } = useTranslation(['LoginPage', 'Common'])
 
   const [rememberMe, setRememberMe] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
+
+  const [formData, setFormData] = useState<LoginFormData>({
+    email: '',
+    password: '',
+  })
+
+  const [formErrors, setFormErrors] = useState<LoginFormErrors>({})
+
+  const handleChange =
+    (field: keyof LoginFormData) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      const value = event.target.value
+
+      setFormData((previous) => ({
+        ...previous,
+        [field]: value,
+      }))
+
+      setFormErrors((previous) => ({
+        ...previous,
+        [field]: undefined,
+      }))
+    }
+
+  const handleLogin = () => {
+    const result = loginSchema.safeParse(formData)
+
+    if (!result.success) {
+      const errors: LoginFormErrors = {}
+
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof LoginFormData
+
+        if (field && !errors[field]) {
+          errors[field] = issue.message
+        }
+      })
+
+      setFormErrors(errors)
+
+      return
+    }
+
+    setFormErrors({})
+
+    console.log('Valid login data:', {
+      ...result.data,
+      rememberMe,
+    })
+  }
 
   return (
     <PufziFormCard
@@ -57,12 +108,23 @@ export const LoginForm = () => {
 
         {/* FORM */}
         <Stack spacing={2}>
-          <PufziTextField label={t('LoginPage:email')} type="email" />
+          <PufziTextField
+            label={t('LoginPage:email')}
+            type="email"
+            value={formData.email}
+            onChange={handleChange('email')}
+            error={Boolean(formErrors.email)}
+            helperText={formErrors.email ? t(`LoginPage:${formErrors.email}`) : undefined}
+          />
 
           <Stack spacing={0.75}>
             <PufziTextField
               label={t('LoginPage:password')}
               type={showPassword ? 'text' : 'password'}
+              value={formData.password}
+              onChange={handleChange('password')}
+              error={Boolean(formErrors.password)}
+              helperText={formErrors.password ? t(`LoginPage:${formErrors.password}`) : undefined}
               slotProps={{
                 input: {
                   endAdornment: (
@@ -120,6 +182,7 @@ export const LoginForm = () => {
         <PufziButton
           label={t('Common:login')}
           fullWidth
+          onClick={handleLogin}
           sx={{
             fontSize: 18,
           }}

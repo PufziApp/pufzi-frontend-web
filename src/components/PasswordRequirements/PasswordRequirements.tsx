@@ -5,7 +5,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined'
 
 import { useTranslation } from 'react-i18next'
-import { passwordRules } from '../types/client-register-page.types'
+import { passwordRules } from '../../pages/public/components/ClientRegisterPage/types/client-register-page.types'
 
 type PasswordRequirementsProps = {
   password: string

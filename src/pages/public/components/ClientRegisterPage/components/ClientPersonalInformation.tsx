@@ -9,7 +9,7 @@ import ErrorRoundedIcon from '@mui/icons-material/ErrorRounded'
 
 import { useTranslation } from 'react-i18next'
 
-import { PasswordRequirements } from './PasswordRequirements'
+import { PasswordRequirements } from '../../../../../components/PasswordRequirements/PasswordRequirements'
 
 import { PufziFormTitle } from '../../../../../components/PufziFormTitle/PufziFormTitle'
 import { PufziFormSubtitle } from '../../../../../components/PufziFormSubtitle/PufziFormSubtitle'

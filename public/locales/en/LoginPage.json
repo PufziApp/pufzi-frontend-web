@@ -9,5 +9,10 @@
   "password": "Password",
   "rememberMe": "Remember me",
   "subtitle": "Sign in to continue caring for your furry friends.",
-  "title": "Welcome back! 🐾"
+  "title": "Welcome back! 🐾",
+  "validation": {
+    "emailInvalid": "Enter a valid email address.",
+    "emailRequired": "Email address is required.",
+    "passwordRequired": "Password is required."
+  }
 }
