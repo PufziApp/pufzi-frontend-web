@@ -43,20 +43,15 @@ export const RegisterForm = () => {
   const [formData, setFormData] = useState<RegisterFormData>({
     firstName: '',
     lastName: '',
-
     email: '',
-
     password: '',
     confirmPassword: '',
-
     salonName: '',
     phone: '',
-
     address: '',
     city: '',
     county: '',
     postalCode: '',
-
     plan: 'pro',
   })
 
@@ -196,27 +191,21 @@ export const RegisterForm = () => {
           sm: 520,
           md: 580,
         },
-
         maxWidth: '100%',
-
         alignSelf: {
           xs: 'center',
           md: 'flex-end',
         },
-
         height: {
           xs: 'auto',
           md: 800,
         },
-
         minHeight: {
           md: 800,
         },
-
         maxHeight: {
           md: 800,
         },
-
         overflow: 'hidden',
       }}
     >

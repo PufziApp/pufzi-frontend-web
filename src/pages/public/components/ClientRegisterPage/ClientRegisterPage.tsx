@@ -2,22 +2,33 @@ import { Box } from '@mui/material'
 
 import clientRegisterPageBackgroundOrange from '../../../../assets/clientRegisterPageBackgroundOrange.png'
 import clientRegisterPageBackgroundGreen from '../../../../assets/clientRegisterPageBackgroundGreen.png'
+import darkClientRegisterPageBackgroundOrange from '../../../../assets/darkClientRegisterPageBackgroundOrange.png'
+import darkClientRegisterPageBackgroundGreen from '../../../../assets/darkClientRegisterPageBackgroundGreen.png'
 
 import { useAppTheme } from '../../../../theme/useAppTheme'
 import { ClientRegisterForm } from './components/ClientRegisterForm'
 
 export const ClientRegisterPage = () => {
-  const { themeColor } = useAppTheme()
+  const { themeColor, mode } = useAppTheme()
 
-  const backgroundImage =
-    themeColor === 'orange' ? clientRegisterPageBackgroundOrange : clientRegisterPageBackgroundGreen
+  const backgroundImage = () => {
+    if (themeColor === 'orange' && mode === 'light') {
+      return clientRegisterPageBackgroundOrange
+    } else if (themeColor === 'orange' && mode === 'dark') {
+      return darkClientRegisterPageBackgroundOrange
+    } else if (themeColor === 'sage' && mode === 'light') {
+      return clientRegisterPageBackgroundGreen
+    } else if (themeColor === 'sage' && mode === 'dark') {
+      return darkClientRegisterPageBackgroundGreen
+    }
+  }
 
   return (
     <Box
       sx={{
         minHeight: '100dvh',
 
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage()})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
