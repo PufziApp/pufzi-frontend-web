@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
 import { useTranslation } from 'react-i18next'
 
@@ -9,16 +9,73 @@ export const Functionalities = () => {
   const { t } = useTranslation('Functionalities')
 
   return (
-    <Stack sx={{ bgcolor: 'background.paper', pb: 2.5 }}>
-      <IconTitle
-        icon={<AutoAwesomeIcon />}
-        title={t('title')}
-        sectionTitle={t('sectionTitle.main')}
-        highlightedSectionTitle={t('sectionTitle.highlight')}
-        sectionDescription={t('sectionDescription')}
-      />
+    <Box
+      component="section"
+      sx={{
+        width: '100%',
+        maxWidth: '100%',
+        overflowX: 'hidden',
+        bgcolor: 'background.paper',
 
-      <Cards />
-    </Stack>
+        py: {
+          xs: 5,
+          sm: 6,
+          md: 7,
+          lg: 8,
+        },
+      }}
+    >
+      <Container
+        maxWidth="xl"
+        sx={{
+          width: '100%',
+
+          px: {
+            xs: 2,
+            sm: 3,
+            md: 4,
+            lg: 6,
+            xl: 8,
+          },
+        }}
+      >
+        <Stack
+          spacing={{
+            xs: 4,
+            sm: 5,
+            md: 6,
+          }}
+          sx={{
+            width: '100%',
+            minWidth: 0,
+          }}
+        >
+          {/* TITLE */}
+          <Box
+            sx={{
+              width: '100%',
+              minWidth: 0,
+              overflow: 'hidden',
+
+              '& *': {
+                maxWidth: '100%',
+                boxSizing: 'border-box',
+              },
+            }}
+          >
+            <IconTitle
+              icon={<AutoAwesomeIcon />}
+              title={t('title')}
+              sectionTitle={t('sectionTitle.main')}
+              highlightedSectionTitle={t('sectionTitle.highlight')}
+              sectionDescription={t('sectionDescription')}
+            />
+          </Box>
+
+          {/* CARDS */}
+          <Cards />
+        </Stack>
+      </Container>
+    </Box>
   )
 }

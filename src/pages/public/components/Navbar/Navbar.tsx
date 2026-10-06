@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import {
   AppBar,
   Box,
@@ -11,21 +12,28 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
+
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 import { PufziButton } from '../../../../components/PufziButton/PufziButton'
 import { PufziLinkButton } from '../../../../components/PufziLinkButton/PufziLinkButton'
-import { useTranslation } from 'react-i18next'
 import { ThemeSwitcher } from '../../../../components/ThemeSwitcher/ThemeSwitcher'
 import { LanguageSwitcher } from '../../../../components/LanguageSwitcher/LanguageSwitcher'
+
 import { MENU_OPTIONS } from './types/menuOptions'
-import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   const { t } = useTranslation(['LandingPage', 'Common'])
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const handleOpenMenu = () => {
+    setMobileMenuOpen(true)
+  }
 
   const handleCloseMenu = () => {
     setMobileMenuOpen(false)
@@ -43,8 +51,11 @@ export const Navbar = () => {
         sx={{
           bgcolor: 'background.paper',
           color: 'text.primary',
+
           borderBottom: '1px solid',
           borderColor: 'divider',
+
+          zIndex: (theme) => theme.zIndex.appBar,
         }}
       >
         <Container
@@ -55,6 +66,7 @@ export const Navbar = () => {
               sm: 3,
               md: 3,
               lg: 3,
+              xl: 4,
             },
           }}
         >
@@ -62,70 +74,95 @@ export const Navbar = () => {
             disableGutters
             sx={{
               height: {
-                xs: 64,
-                sm: 68,
-                md: 72,
+                xs: 60,
+                sm: 64,
+                md: 68,
                 lg: 76,
               },
 
               minHeight: {
-                xs: '64px !important',
-                sm: '68px !important',
-                md: '72px !important',
+                xs: '60px !important',
+                sm: '64px !important',
+                md: '68px !important',
                 lg: '76px !important',
               },
-
-              display: 'grid',
+              display: {
+                xs: 'flex',
+                lg: 'grid',
+              },
 
               gridTemplateColumns: {
-                xs: '1fr auto',
-                md: 'auto 1fr auto',
+                lg: 'auto minmax(0, 1fr) auto',
               },
 
               alignItems: 'center',
 
-              columnGap: {
-                md: 2,
-                lg: 3,
+              justifyContent: {
+                xs: 'space-between',
+                lg: 'initial',
               },
+
+              columnGap: {
+                xs: 1,
+                sm: 2,
+                lg: 2,
+                xl: 3,
+              },
+
+              width: '100%',
             }}
           >
             {/* LOGO */}
             <Stack
               direction="row"
               spacing={{
-                xs: 0.7,
-                sm: 1,
+                xs: 0.6,
+                sm: 0.8,
+                md: 1,
                 lg: 1.2,
               }}
               onClick={handleLogoClick}
               sx={{
                 cursor: 'pointer',
+
                 height: '100%',
+
                 alignItems: 'center',
+
                 flexShrink: 0,
+
+                minWidth: 0,
+
+                mr: {
+                  xs: 'auto',
+                  lg: 0,
+                },
               }}
             >
               <Box
                 sx={{
                   width: {
-                    xs: 42,
-                    sm: 44,
-                    md: 46,
+                    xs: 38,
+                    sm: 42,
+                    md: 44,
                     lg: 48,
                   },
 
                   height: {
-                    xs: 42,
-                    sm: 44,
-                    md: 46,
+                    xs: 38,
+                    sm: 42,
+                    md: 44,
                     lg: 48,
                   },
 
                   display: 'flex',
+
                   alignItems: 'center',
+
                   justifyContent: 'center',
+
                   overflow: 'hidden',
+
                   flexShrink: 0,
                 }}
               >
@@ -135,21 +172,23 @@ export const Navbar = () => {
                   alt="Pufzi"
                   sx={{
                     width: {
-                      xs: 60,
-                      sm: 64,
-                      md: 66,
+                      xs: 56,
+                      sm: 60,
+                      md: 64,
                       lg: 70,
                     },
 
                     height: {
-                      xs: 60,
-                      sm: 64,
-                      md: 66,
+                      xs: 56,
+                      sm: 60,
+                      md: 64,
                       lg: 70,
                     },
 
                     objectFit: 'contain',
+
                     display: 'block',
+
                     transform: 'scale(1.12)',
                   }}
                 />
@@ -158,16 +197,21 @@ export const Navbar = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    xs: 21,
-                    sm: 22,
-                    md: 23,
+                    xs: 20,
+                    sm: 21,
+                    md: 22,
                     lg: 24,
                   },
 
                   fontWeight: 800,
+
                   lineHeight: 1,
+
                   color: 'text.secondary',
+
                   fontFamily: '"Nunito", sans-serif',
+
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {t('Common:appName')}
@@ -178,17 +222,17 @@ export const Navbar = () => {
             <Stack
               direction="row"
               spacing={{
-                md: 1.5,
-                lg: 2.5,
-                xl: 4,
+                lg: 1.5,
+                xl: 3,
               }}
               sx={{
                 display: {
                   xs: 'none',
-                  md: 'flex',
+                  lg: 'flex',
                 },
 
                 alignItems: 'center',
+
                 justifyContent: 'center',
 
                 minWidth: 0,
@@ -207,18 +251,19 @@ export const Navbar = () => {
             <Stack
               direction="row"
               spacing={{
-                md: 0.5,
-                lg: 0.8,
-                xl: 1.5,
+                lg: 0.5,
+                xl: 1,
               }}
               sx={{
                 display: {
                   xs: 'none',
-                  md: 'flex',
+                  lg: 'flex',
                 },
 
                 alignItems: 'center',
+
                 justifyContent: 'flex-end',
+
                 flexShrink: 0,
               }}
             >
@@ -231,23 +276,23 @@ export const Navbar = () => {
                 to="/login"
                 sx={{
                   color: 'text.primary',
+
                   textTransform: 'none',
 
                   fontSize: {
-                    md: 13,
-                    lg: 14,
-                    xl: 16,
+                    lg: 13,
+                    xl: 15,
                   },
 
                   fontWeight: 600,
 
                   px: {
-                    md: 0.7,
-                    lg: 1,
-                    xl: 1.5,
+                    lg: 0.7,
+                    xl: 1.3,
                   },
 
                   minWidth: 'auto',
+
                   whiteSpace: 'nowrap',
                 }}
               >
@@ -260,22 +305,28 @@ export const Navbar = () => {
                 to="/client-register"
                 sx={{
                   whiteSpace: 'nowrap',
+
                   px: {
-                    md: 1.5,
-                    lg: 2,
+                    lg: 1.5,
                     xl: 2.5,
                   },
+
                   fontSize: {
-                    md: 12,
-                    lg: 13,
+                    lg: 12,
                     xl: 14,
                   },
+
                   bgcolor: 'primary.light',
+
                   color: 'secondary.contrastText',
+
                   '&:hover': {
                     bgcolor: 'primary.main',
+
                     color: 'primary.contrastText',
+
                     borderColor: 'primary.main',
+
                     transform: 'translateY(-2px)',
 
                     boxShadow: (theme) => `0 8px 18px ${theme.palette.action.selected}`,
@@ -289,34 +340,44 @@ export const Navbar = () => {
                 to="/register"
                 sx={{
                   whiteSpace: 'nowrap',
+
                   px: {
-                    md: 1.5,
-                    lg: 2,
+                    lg: 1.5,
                     xl: 2.5,
                   },
+
                   fontSize: {
-                    md: 12,
-                    lg: 13,
+                    lg: 12,
                     xl: 14,
                   },
                 }}
               />
             </Stack>
 
-            {/* MOBILE */}
+            {/* MOBILE / TABLET ACTIONS */}
             <Stack
               direction="row"
-              spacing={0.5}
+              spacing={{
+                xs: 0.25,
+                sm: 0.5,
+                md: 0.75,
+              }}
               sx={{
                 display: {
                   xs: 'flex',
-                  md: 'none',
+                  lg: 'none',
                 },
 
                 alignItems: 'center',
+
                 justifyContent: 'flex-end',
+
+                flexShrink: 0,
+
+                ml: 'auto',
               }}
             >
+              {/* TABLET LANGUAGE */}
               <Box
                 sx={{
                   display: {
@@ -328,6 +389,7 @@ export const Navbar = () => {
                 <LanguageSwitcher />
               </Box>
 
+              {/* TABLET THEME */}
               <Box
                 sx={{
                   display: {
@@ -339,18 +401,36 @@ export const Navbar = () => {
                 <ThemeSwitcher />
               </Box>
 
+              {/* HAMBURGER */}
               <IconButton
-                onClick={() => setMobileMenuOpen(true)}
+                onClick={handleOpenMenu}
                 aria-label="Open menu"
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-navigation"
                 sx={{
-                  width: 42,
-                  height: 42,
+                  width: {
+                    xs: 40,
+                    sm: 42,
+                    md: 44,
+                  },
+
+                  height: {
+                    xs: 40,
+                    sm: 42,
+                    md: 44,
+                  },
+
                   color: 'text.primary',
+
+                  flexShrink: 0,
                 }}
               >
                 <MenuRoundedIcon
                   sx={{
-                    fontSize: 30,
+                    fontSize: {
+                      xs: 28,
+                      sm: 30,
+                    },
                   }}
                 />
               </IconButton>
@@ -359,21 +439,29 @@ export const Navbar = () => {
         </Container>
       </AppBar>
 
-      {/* MOBILE DRAWER */}
+      {/* MOBILE / TABLET DRAWER */}
       <Drawer
+        id="mobile-navigation"
         anchor="right"
         open={mobileMenuOpen}
         onClose={handleCloseMenu}
+        ModalProps={{
+          keepMounted: true,
+        }}
         slotProps={{
           paper: {
             sx: {
               width: {
                 xs: '100%',
-                sm: 360,
+                sm: 380,
+                md: 400,
               },
 
               maxWidth: '100vw',
+
               bgcolor: 'background.paper',
+
+              overflowX: 'hidden',
             },
           },
         }}
@@ -381,8 +469,16 @@ export const Navbar = () => {
         <Box
           sx={{
             height: '100%',
+
+            minHeight: 0,
+
             display: 'flex',
+
             flexDirection: 'column',
+
+            overflowY: 'auto',
+
+            overflowX: 'hidden',
 
             p: {
               xs: 2,
@@ -390,12 +486,17 @@ export const Navbar = () => {
             },
           }}
         >
-          {/* HEADER DRAWER */}
+          {/* DRAWER HEADER */}
           <Stack
             direction="row"
             sx={{
               alignItems: 'center',
+
               justifyContent: 'space-between',
+
+              flexShrink: 0,
+
+              width: '100%',
             }}
           >
             <Stack
@@ -404,17 +505,35 @@ export const Navbar = () => {
               onClick={handleLogoClick}
               sx={{
                 cursor: 'pointer',
+
                 alignItems: 'center',
+
+                minWidth: 0,
+
+                flexShrink: 0,
               }}
             >
               <Box
                 sx={{
-                  width: 44,
-                  height: 44,
+                  width: {
+                    xs: 40,
+                    sm: 44,
+                  },
+
+                  height: {
+                    xs: 40,
+                    sm: 44,
+                  },
+
                   display: 'flex',
+
                   justifyContent: 'center',
+
                   alignItems: 'center',
+
                   overflow: 'hidden',
+
+                  flexShrink: 0,
                 }}
               >
                 <Box
@@ -422,9 +541,18 @@ export const Navbar = () => {
                   src="/LogoPufziColor.png"
                   alt="Pufzi"
                   sx={{
-                    width: 64,
-                    height: 64,
+                    width: {
+                      xs: 60,
+                      sm: 64,
+                    },
+
+                    height: {
+                      xs: 60,
+                      sm: 64,
+                    },
+
                     objectFit: 'contain',
+
                     transform: 'scale(1.12)',
                   }}
                 />
@@ -432,11 +560,20 @@ export const Navbar = () => {
 
               <Typography
                 sx={{
-                  fontSize: 22,
+                  fontSize: {
+                    xs: 21,
+                    sm: 22,
+                  },
+
                   fontWeight: 800,
+
                   lineHeight: 1,
+
                   color: 'text.secondary',
+
                   fontFamily: '"Nunito", sans-serif',
+
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {t('Common:appName')}
@@ -447,7 +584,13 @@ export const Navbar = () => {
               onClick={handleCloseMenu}
               aria-label="Close menu"
               sx={{
+                width: 42,
+
+                height: 42,
+
                 color: 'text.primary',
+
+                flexShrink: 0,
               }}
             >
               <CloseRoundedIcon
@@ -458,10 +601,27 @@ export const Navbar = () => {
             </IconButton>
           </Stack>
 
-          <Divider sx={{ my: 2.5 }} />
+          <Divider
+            sx={{
+              my: {
+                xs: 2,
+                sm: 2.5,
+              },
+            }}
+          />
 
-          {/* LINKS */}
-          <Stack spacing={1}>
+          {/* NAVIGATION LINKS */}
+          <Stack
+            spacing={{
+              xs: 0.5,
+              sm: 1,
+            }}
+            sx={{
+              width: '100%',
+
+              alignItems: 'center',
+            }}
+          >
             {MENU_OPTIONS.map((item) => (
               <Box
                 key={item.id}
@@ -469,9 +629,40 @@ export const Navbar = () => {
                 sx={{
                   width: '100%',
 
+                  display: 'flex',
+
+                  alignItems: 'center',
+
+                  justifyContent: 'center',
+
+                  textAlign: 'center',
+
+                  /*
+                   * Force centering regardless of theme-specific
+                   * styles inside PufziLinkButton.
+                   */
                   '& > *': {
-                    width: '100%',
-                    justifyContent: 'flex-start',
+                    width: '100% !important',
+
+                    display: 'flex !important',
+
+                    justifyContent: 'center !important',
+
+                    alignItems: 'center !important',
+
+                    textAlign: 'center !important',
+                  },
+
+                  '& a': {
+                    justifyContent: 'center !important',
+
+                    textAlign: 'center !important',
+                  },
+
+                  '& button': {
+                    justifyContent: 'center !important',
+
+                    textAlign: 'center !important',
                   },
                 }}
               >
@@ -480,9 +671,16 @@ export const Navbar = () => {
             ))}
           </Stack>
 
-          <Divider sx={{ my: 2.5 }} />
+          <Divider
+            sx={{
+              my: {
+                xs: 2,
+                sm: 2.5,
+              },
+            }}
+          />
 
-          {/* MOBILE SWITCHERS */}
+          {/* PHONE SWITCHERS */}
           <Stack
             direction="row"
             sx={{
@@ -492,8 +690,14 @@ export const Navbar = () => {
               },
 
               mb: 2.5,
+
               alignItems: 'center',
+
               justifyContent: 'space-between',
+
+              gap: 2,
+
+              width: '100%',
             }}
           >
             <LanguageSwitcher />
@@ -506,6 +710,10 @@ export const Navbar = () => {
             spacing={1.5}
             sx={{
               mt: 'auto',
+
+              pt: 2,
+
+              width: '100%',
             }}
           >
             <Button
@@ -515,17 +723,22 @@ export const Navbar = () => {
               onClick={handleCloseMenu}
               sx={{
                 color: 'text.primary',
+
                 textTransform: 'none',
+
                 fontSize: 16,
+
                 fontWeight: 600,
+
                 minHeight: 46,
+
+                borderRadius: 2,
               }}
             >
               {t('Common:login')}
             </Button>
 
-            <Stack
-              spacing={1.5}
+            <Box
               sx={{
                 width: '100%',
 
@@ -539,15 +752,49 @@ export const Navbar = () => {
                 component={Link}
                 to="/client-register"
                 onClick={handleCloseMenu}
-              />
+                sx={{
+                  width: '100%',
 
+                  minHeight: 46,
+
+                  bgcolor: 'primary.light',
+
+                  color: 'secondary.contrastText',
+
+                  '&:hover': {
+                    bgcolor: 'primary.main',
+
+                    color: 'primary.contrastText',
+
+                    borderColor: 'primary.main',
+
+                    boxShadow: (theme) => `0 8px 18px ${theme.palette.action.selected}`,
+                  },
+                }}
+              />
+            </Box>
+
+            <Box
+              sx={{
+                width: '100%',
+
+                '& > *': {
+                  width: '100%',
+                },
+              }}
+            >
               <PufziButton
                 label={t('Common:businessRegister')}
                 component={Link}
                 to="/register"
                 onClick={handleCloseMenu}
+                sx={{
+                  width: '100%',
+
+                  minHeight: 46,
+                }}
               />
-            </Stack>
+            </Box>
           </Stack>
         </Box>
       </Drawer>

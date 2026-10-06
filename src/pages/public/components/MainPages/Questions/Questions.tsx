@@ -1,4 +1,4 @@
-import { Grid, Stack } from '@mui/material'
+import { Container, Stack } from '@mui/material'
 import HelpIcon from '@mui/icons-material/Help'
 import { useTranslation } from 'react-i18next'
 
@@ -11,7 +11,18 @@ export const Questions = () => {
   return (
     <Stack
       sx={{
-        pb: 8,
+        width: '100%',
+        maxWidth: '100%',
+        minWidth: 0,
+
+        pb: {
+          xs: 2.5,
+          sm: 3,
+          md: 3.5,
+          lg: 4,
+        },
+
+        boxSizing: 'border-box',
       }}
     >
       <IconTitle
@@ -22,23 +33,28 @@ export const Questions = () => {
         sectionDescription={t('sectionDescription')}
       />
 
-      <Grid
-        container
+      <Container
+        maxWidth="xl"
         sx={{
-          pt: 4,
-          px: {
+          width: '100%',
+
+          pt: {
             xs: 2,
-            sm: 4,
-            md: 8,
-            lg: 16,
-            xl: 25,
+            sm: 2.5,
+            md: 3,
+          },
+
+          px: {
+            xs: 1.5,
+            sm: 2.5,
+            md: 3,
+            lg: 4,
+            xl: 5,
           },
         }}
       >
-        <Grid size={12}>
-          <QuestionsAccordion />
-        </Grid>
-      </Grid>
+        <QuestionsAccordion />
+      </Container>
     </Stack>
   )
 }

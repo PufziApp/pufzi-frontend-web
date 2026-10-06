@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material'
+
 import { GeneralInformation } from './components/GeneralInformation/GeneralInformation'
 import { CardInformation } from './components/CardInformation/CardInformation'
 
@@ -6,22 +7,56 @@ export const Hero = () => {
   return (
     <Grid
       container
-      spacing={2}
+      spacing={{
+        xs: 5,
+        sm: 6,
+        md: 6,
+        lg: 4,
+      }}
       sx={{
         alignItems: 'center',
-        px: 30,
-        py: 6,
+
+        px: {
+          xs: 2,
+          sm: 4,
+          md: 6,
+          lg: 10,
+          xl: 20,
+        },
+
+        py: {
+          xs: 5,
+          sm: 6,
+          md: 7,
+          lg: 8,
+        },
+
+        maxWidth: '1600px',
+        mx: 'auto',
       }}
     >
-      <Grid size={6}>
+      <Grid
+        size={{
+          xs: 12,
+          md: 6,
+        }}
+      >
         <GeneralInformation />
       </Grid>
 
       <Grid
-        size={6}
+        size={{
+          xs: 12,
+          md: 6,
+        }}
         sx={{
           display: 'flex',
-          justifyContent: 'center',
+
+          justifyContent: {
+            xs: 'center',
+            md: 'center',
+          },
+
           alignItems: 'center',
         }}
       >

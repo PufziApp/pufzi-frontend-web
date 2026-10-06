@@ -13,11 +13,11 @@ export const RegisterPage = () => {
 
   const backgroundImage = () => {
     if (themeColor === 'orange' && mode === 'light') {
-      return registerPageBackgroundGreen
+      return registerPageBackgroundOrange
     } else if (themeColor === 'orange' && mode === 'dark') {
       return darkRegisterPageBackgroundOrange
     } else if (themeColor === 'sage' && mode === 'light') {
-      return registerPageBackgroundOrange
+      return registerPageBackgroundGreen
     } else if (themeColor === 'sage' && mode === 'dark') {
       return darkRegisterPageBackgroundGreen
     }

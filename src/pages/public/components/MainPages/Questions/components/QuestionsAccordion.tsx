@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@mui/material'
+
+import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material'
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { useTranslation } from 'react-i18next'
+
 import { QUESTION_INFO } from '../types/questions.info'
 
 export const QuestionsAccordion = () => {
@@ -14,152 +17,215 @@ export const QuestionsAccordion = () => {
   }
 
   return (
-    <Grid container spacing={2}>
+    <Box
+      sx={{
+        width: '100%',
+        minWidth: 0,
+
+        display: 'grid',
+
+        gridTemplateColumns: {
+          xs: '1fr',
+          sm: '1fr',
+          md: '1fr',
+          xl: 'repeat(2, minmax(0, 1fr))',
+        },
+
+        gap: {
+          xs: 1.25,
+          sm: 1.5,
+          md: 1.75,
+          xl: 2,
+        },
+      }}
+    >
       {QUESTION_INFO.map((item) => {
         const isExpanded = expanded === item.id
 
         return (
-          <Grid
+          <Accordion
             key={item.id}
-            size={{
-              xs: 12,
-              md: 6,
-            }}
+            expanded={isExpanded}
+            onChange={handleChange(item.id)}
+            disableGutters
+            elevation={0}
             sx={{
-              display: 'flex',
-              alignItems: 'flex-start',
+              width: '100%',
+              minWidth: 0,
+
+              bgcolor: 'background.paper',
+
+              border: '1.5px solid',
+              borderColor: isExpanded ? 'primary.main' : 'divider',
+
+              borderRadius: {
+                xs: '18px !important',
+                sm: '20px !important',
+              },
+
+              overflow: 'hidden',
+
+              boxShadow: 'none',
+
+              '&::before': {
+                display: 'none',
+              },
+
+              '@media (hover: hover)': {
+                '&:hover': {
+                  borderColor: 'primary.main',
+                },
+              },
             }}
           >
-            <Accordion
-              expanded={isExpanded}
-              onChange={handleChange(item.id)}
-              disableGutters
-              elevation={0}
+            <AccordionSummary
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: isExpanded ? 'primary.main' : 'text.secondary',
+
+                    fontSize: {
+                      xs: 20,
+                      sm: 21,
+                      md: 22,
+                    },
+                  }}
+                />
+              }
               sx={{
-                width: '100%',
-                bgcolor: 'background.paper',
-
-                border: '1.5px solid',
-                borderColor: isExpanded ? 'primary.main' : 'divider',
-
-                borderRadius: '28px !important',
-
-                overflow: 'hidden',
-                boxShadow: 'none',
-
-                transition: (theme) =>
-                  theme.transitions.create(['border-color', 'background-color'], {
-                    duration: theme.transitions.duration.short,
-                  }),
-
-                '&::before': {
-                  display: 'none',
+                minHeight: {
+                  xs: 58,
+                  sm: 60,
+                  md: 64,
                 },
 
-                '&:hover': {
+                px: {
+                  xs: 1.75,
+                  sm: 2,
+                  md: 2.25,
+                },
+
+                py: {
+                  xs: 0.5,
+                  sm: 0.5,
+                },
+
+                '&.Mui-expanded': {
+                  minHeight: {
+                    xs: 58,
+                    sm: 60,
+                    md: 64,
+                  },
+                },
+
+                '& .MuiAccordionSummary-content': {
+                  my: 0,
+                  minWidth: 0,
+                  alignItems: 'center',
+                },
+
+                '& .MuiAccordionSummary-content.Mui-expanded': {
+                  my: 0,
+                },
+
+                '& .MuiAccordionSummary-expandIconWrapper': {
+                  width: {
+                    xs: 32,
+                    sm: 34,
+                    md: 36,
+                  },
+
+                  height: {
+                    xs: 32,
+                    sm: 34,
+                    md: 36,
+                  },
+
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+
+                  flexShrink: 0,
+
+                  border: '1.5px solid',
+
+                  borderColor: isExpanded ? 'primary.main' : 'divider',
+
+                  borderRadius: '50%',
+                },
+
+                '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+                  transform: 'rotate(180deg)',
                   borderColor: 'primary.main',
                 },
               }}
             >
-              <AccordionSummary
-                expandIcon={
-                  <ExpandMoreIcon
-                    sx={{
-                      color: isExpanded ? 'primary.main' : 'text.secondary',
-                    }}
-                  />
-                }
+              <Typography
                 sx={{
-                  minHeight: 110,
+                  minWidth: 0,
 
-                  px: {
-                    xs: 3,
-                    sm: 4,
+                  pr: {
+                    xs: 1,
+                    sm: 1.25,
                   },
 
-                  '&.Mui-expanded': {
-                    minHeight: 100,
+                  fontWeight: 700,
+
+                  lineHeight: 1.25,
+
+                  color: 'text.primary',
+
+                  fontSize: {
+                    xs: '0.9rem',
+                    sm: '0.95rem',
+                    md: '1rem',
                   },
 
-                  '& .MuiAccordionSummary-content': {
-                    my: 0,
-                    alignItems: 'center',
-                  },
+                  overflowWrap: 'break-word',
+                }}
+              >
+                {t(item.question)}
+              </Typography>
+            </AccordionSummary>
 
-                  '& .MuiAccordionSummary-content.Mui-expanded': {
-                    my: 0,
-                  },
+            <AccordionDetails
+              sx={{
+                px: {
+                  xs: 1.75,
+                  sm: 2,
+                  md: 2.25,
+                },
 
-                  '& .MuiAccordionSummary-expandIconWrapper': {
-                    width: 48,
-                    height: 48,
+                pt: 0,
 
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                pb: {
+                  xs: 1.5,
+                  sm: 1.75,
+                  md: 2,
+                },
+              }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: 400,
 
-                    flexShrink: 0,
+                  lineHeight: 1.5,
 
-                    border: '1.5px solid',
-                    borderColor: isExpanded ? 'primary.main' : 'divider',
+                  color: 'text.secondary',
 
-                    borderRadius: '50%',
-
-                    transition: (theme) =>
-                      theme.transitions.create(['transform', 'border-color'], {
-                        duration: theme.transitions.duration.short,
-                      }),
-                  },
-
-                  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-                    transform: 'rotate(180deg)',
-                    borderColor: 'primary.main',
+                  fontSize: {
+                    xs: '0.875rem',
+                    sm: '0.9rem',
+                    md: '0.95rem',
                   },
                 }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    pr: 2,
-                    fontWeight: 700,
-                    lineHeight: 1.3,
-                    color: 'text.primary',
-                  }}
-                >
-                  {t(item.question)}
-                </Typography>
-              </AccordionSummary>
-
-              <AccordionDetails
-                sx={{
-                  px: {
-                    xs: 3,
-                    sm: 4,
-                  },
-
-                  pt: 0,
-
-                  pb: {
-                    xs: 3,
-                    sm: 4,
-                  },
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 400,
-                    lineHeight: 1.7,
-                    color: 'text.secondary',
-                  }}
-                >
-                  {t(item.answer)}
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </Grid>
+                {t(item.answer)}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         )
       })}
-    </Grid>
+    </Box>
   )
 }

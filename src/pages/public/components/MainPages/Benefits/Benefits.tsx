@@ -1,15 +1,31 @@
 import { Divider, Stack } from '@mui/material'
-import { IconTitle } from '../../../../../components/IconTitle/IconTitle'
 import VerifiedIcon from '@mui/icons-material/Verified'
-import { useTranslation } from 'react-i18next'
-import { Steps } from './components/Steps/Steps'
 import DevicesIcon from '@mui/icons-material/Devices'
+import { useTranslation } from 'react-i18next'
+
+import { IconTitle } from '../../../../../components/IconTitle/IconTitle'
+import { Steps } from './components/Steps/Steps'
 import { Interface } from './components/Interface/Interface'
 
 export const Benefits = () => {
   const { t } = useTranslation('Benefits')
+
   return (
-    <Stack sx={{ pb: 2.5 }}>
+    <Stack
+      sx={{
+        width: '100%',
+        maxWidth: '100%',
+        minWidth: 0,
+
+        py: {
+          xs: 5,
+          sm: 6,
+          md: 7,
+        },
+
+        boxSizing: 'border-box',
+      }}
+    >
       <IconTitle
         icon={<VerifiedIcon />}
         title={t('title')}
@@ -17,8 +33,21 @@ export const Benefits = () => {
         highlightedSectionTitle={t('sectionTitle.highlight')}
         sectionDescription={t('sectionDescription')}
       />
+
       <Steps />
-      <Divider sx={{ color: 'divider', mt: 2 }} />
+
+      <Divider
+        sx={{
+          color: 'divider',
+
+          my: {
+            xs: 5,
+            sm: 6,
+            md: 7,
+          },
+        }}
+      />
+
       <IconTitle
         icon={<DevicesIcon />}
         title={t('interface.title')}
@@ -26,6 +55,7 @@ export const Benefits = () => {
         highlightedSectionTitle={t('interface.sectionTitle.highlight')}
         sectionDescription={t('interface.sectionDescription')}
       />
+
       <Interface />
     </Stack>
   )

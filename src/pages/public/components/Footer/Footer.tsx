@@ -9,23 +9,56 @@ export const Footer = () => {
       component="footer"
       sx={{
         width: '100%',
+        maxWidth: '100%',
+        minWidth: 0,
+
         boxSizing: 'border-box',
+
         borderTop: '1px solid',
         borderColor: 'divider',
-        backgroundColor: 'background.default',
-        py: 4,
-        px: 3,
+
+        bgcolor: 'background.default',
+
+        py: {
+          xs: 1.5,
+          sm: 2,
+          md: 2.5,
+        },
+
+        px: {
+          xs: 1.5,
+          sm: 2.5,
+          md: 3,
+        },
+
         alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
-      <Box
+      <Stack
+        direction={{
+          xs: 'column',
+          sm: 'row',
+        }}
+        spacing={{
+          xs: 0.5,
+          sm: 1,
+        }}
         sx={{
-          display: 'grid',
-          gridTemplateColumns: '48px auto 48px',
-          alignItems: 'center',
-          columnGap: 1.5,
-          width: 'fit-content',
+          width: '100%',
+
+          maxWidth: {
+            xs: 420,
+            sm: 760,
+            md: 900,
+          },
+
           mx: 'auto',
+
+          alignItems: 'center',
+          justifyContent: 'center',
+
+          textAlign: 'center',
         }}
       >
         <Box
@@ -33,27 +66,54 @@ export const Footer = () => {
           src="/LogoPufziColor.png"
           alt={t('Common:appName')}
           sx={{
-            width: 42,
-            height: 42,
+            width: {
+              xs: 28,
+              sm: 32,
+              md: 36,
+            },
+
+            height: {
+              xs: 28,
+              sm: 32,
+              md: 36,
+            },
+
             objectFit: 'contain',
-            justifySelf: 'center',
+
+            flexShrink: 0,
           }}
         />
 
         <Typography
           variant="body2"
           sx={{
+            width: {
+              xs: '100%',
+              sm: 'auto',
+            },
+
             color: 'text.secondary',
-            whiteSpace: 'nowrap',
+
             textAlign: 'center',
+
+            whiteSpace: 'normal',
+
+            lineHeight: {
+              xs: 1.3,
+              sm: 1.4,
+            },
+
+            fontSize: {
+              xs: '0.68rem',
+              sm: '0.78rem',
+              md: '0.82rem',
+            },
           }}
         >
           {t('Footer:year')} {t('Common:appName')}. {t('Footer:allRightsReserved')}{' '}
           {t('Footer:builtWithLove')}
         </Typography>
-
-        <Box sx={{ width: 48 }} />
-      </Box>
+      </Stack>
     </Stack>
   )
 }

@@ -1,4 +1,5 @@
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
+
 import { Functionalities } from './Functionalities/Functionalities'
 import { Benefits } from './Benefits/Benefits'
 import { Prices } from './Prices/Prices'
@@ -6,19 +7,61 @@ import { Questions } from './Questions/Questions'
 
 export const MainPages = () => {
   return (
-    <Stack spacing={2} sx={{ minWidth: '100vh' }}>
-      <Stack id="functionalities">
+    <Stack
+      spacing={0}
+      sx={{
+        width: '100%',
+        maxWidth: '100%',
+        minWidth: 0,
+
+        overflowX: 'hidden',
+
+        boxSizing: 'border-box',
+      }}
+    >
+      <Box
+        id="functionalities"
+        component="section"
+        sx={{
+          width: '100%',
+          minWidth: 0,
+        }}
+      >
         <Functionalities />
-      </Stack>
-      <Stack id="benefits">
+      </Box>
+
+      <Box
+        id="benefits"
+        component="section"
+        sx={{
+          width: '100%',
+          minWidth: 0,
+        }}
+      >
         <Benefits />
-      </Stack>
-      <Stack id="prices">
+      </Box>
+
+      <Box
+        id="prices"
+        component="section"
+        sx={{
+          width: '100%',
+          minWidth: 0,
+        }}
+      >
         <Prices />
-      </Stack>
-      <Stack id="faq">
+      </Box>
+
+      <Box
+        id="faq"
+        component="section"
+        sx={{
+          width: '100%',
+          minWidth: 0,
+        }}
+      >
         <Questions />
-      </Stack>
+      </Box>
     </Stack>
   )
 }
