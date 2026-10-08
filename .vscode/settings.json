@@ -1,9 +1,14 @@
 {
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.run": "onType",
+
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "js/ts.suggest.autoImports": true,
+  "js/ts.preferences.includePackageJsonAutoImports": "on"
 }

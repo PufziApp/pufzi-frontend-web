@@ -1,0 +1,18 @@
+{
+  "backToWebsite": "← Înapoi la site",
+  "continueWith": "sau continuă cu",
+  "createBusinessAccount": "Cont business",
+  "createClientAccount": "Cont client",
+  "email": "Email",
+  "forgotPassword": "Ai uitat parola?",
+  "noAccount": "Nu ai încă un cont?",
+  "password": "Parolă",
+  "rememberMe": "Ține-mă minte",
+  "subtitle": "Intră în cont pentru a continua să ai grijă de prietenii tăi blănoși.",
+  "title": "Bine ai revenit! 🐾",
+  "validation": {
+    "emailInvalid": "Introdu o adresă de email validă.",
+    "emailRequired": "Adresa de email este obligatorie.",
+    "passwordRequired": "Parola este obligatorie."
+  }
+}

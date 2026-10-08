@@ -1,1 +1,19 @@
-{}
+{
+  "appName": "Pufzi",
+  "businessRegister": "Create business account",
+  "clientRegister": "Create client account",
+  "login": "Login",
+  "logout": "Logout",
+  "navbar": {
+    "color": {
+      "green": "Sage Green",
+      "orange": "Warm Orange",
+      "title": "Color"
+    },
+    "mode": {
+      "dark": "Dark",
+      "light": "Light",
+      "title": "Mode"
+    }
+  }
+}

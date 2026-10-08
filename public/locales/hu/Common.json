@@ -1,1 +1,19 @@
-{}
+{
+  "appName": "Pufzi",
+  "businessRegister": "Üzleti fiók létrehozása",
+  "clientRegister": "Ügyfélfiók létrehozása",
+  "login": "Bejelentkezés",
+  "logout": "Kijelentkezés",
+  "navbar": {
+    "color": {
+      "green": "Zsályazöld",
+      "orange": "Meleg narancs",
+      "title": "Szín"
+    },
+    "mode": {
+      "dark": "Sötét",
+      "light": "Világos",
+      "title": "Mód"
+    }
+  }
+}

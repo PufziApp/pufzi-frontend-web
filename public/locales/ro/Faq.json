@@ -1,0 +1,32 @@
+{
+  "answers": {
+    "answer1": "Da. Poți testa toate funcționalitățile principale în perioada de probă de 7 zile, fără să fii obligat să continui după terminarea acesteia.",
+    "answer10": "Da. Abonamentul poate fi oprit fără contract pe termen lung, iar accesul rămâne activ până la finalul perioadei deja achitate.",
+    "answer2": "Da. Clienții pot vedea serviciile, disponibilitatea și orele libere și își pot trimite singuri cererea de programare.",
+    "answer3": "Da, fiecare programare trebuie confirmată manual",
+    "answer4": "Da. Poți modifica data, ora, serviciul sau angajatul, iar clientul este informat despre schimbare.",
+    "answer5": "Da. Poți crea manual o programare direct din aplicație pentru clienții care te contactează în afara aplicației.",
+    "answer6": "Da. Poți adăuga membri ai echipei și le poți configura rolurile, serviciile, programul de lucru și disponibilitatea, iar aceștia vor avea și ei conturile lor.",
+    "answer7": "Platforma ține cont automat de programul angajaților, durata serviciilor și programările existente pentru a afișa doar intervalele disponibile.",
+    "answer8": "Da. Pot primi notificări pentru programări, modificări, vaccinuri sau recomandări pentru următoarea vizită.",
+    "answer9": "Da. Platforma poate include mesagerie directă între business și client, astfel încât informațiile despre programare să rămână într-un singur loc."
+  },
+  "questions": {
+    "question1": "Pot încerca platforma gratuit înainte să plătesc?",
+    "question10": "Pot anula abonamentul oricând?",
+    "question2": "Clienții mei își pot face singuri programări online?",
+    "question3": "Trebuie să confirm fiecare programare?",
+    "question4": "Pot modifica sau reprograma o programare?",
+    "question5": "Pot adăuga programări făcute prin telefon sau direct la recepție?",
+    "question6": "Pot avea mai mulți angajați în același cont business?",
+    "question7": "Cum evit programările suprapuse?",
+    "question8": "Clienții primesc remindere?",
+    "question9": "Pot comunica direct cu clienții?"
+  },
+  "sectionDescription": "Tot ce trebuie să știi înainte să începi.",
+  "sectionTitle": {
+    "highlight": "frecvente",
+    "main": "Întrebări"
+  },
+  "title": "FAQ"
+}

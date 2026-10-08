@@ -1,0 +1,27 @@
+{
+  "priceCard": {
+    "button": "Try PRO for 7 days",
+    "description": "For growing salons",
+    "info": {
+      "booking": "Online booking 24/7",
+      "clients": "Unlimited clients & pets",
+      "history": "Pet grooming history",
+      "messages": "Direct client messaging",
+      "notifications": "Automatic notifications & reminders",
+      "reservations": "Complete appointments & calendar",
+      "reviews": "Client reviews & feedback",
+      "services": "Custom services & pricing",
+      "statistics": "Complete statistics & reports",
+      "team": "Team & availability"
+    },
+    "month": "/ month",
+    "price": "200 RON",
+    "type": "PRO"
+  },
+  "sectionDescription": "No surprises. Cancel anytime.",
+  "sectionTitle": {
+    "highlight": "transparent",
+    "main": "Pricing"
+  },
+  "title": "Pricing"
+}

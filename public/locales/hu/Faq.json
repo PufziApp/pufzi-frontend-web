@@ -1,0 +1,32 @@
+{
+  "answers": {
+    "answer1": "Igen. A 7 napos próbaidőszak alatt kipróbálhatod az összes fő funkciót, és a próbaidőszak lejárta után nem kötelező folytatnod az előfizetést.",
+    "answer10": "Igen. Az előfizetés hosszú távú szerződés nélkül bármikor lemondható, és a hozzáférés a már kifizetett időszak végéig aktív marad.",
+    "answer2": "Igen. Az ügyfelek megtekinthetik a szolgáltatásokat, az elérhetőséget és a szabad időpontokat, majd önállóan elküldhetik a foglalási kérelmüket.",
+    "answer3": "Igen, minden időpontot manuálisan kell megerősíteni.",
+    "answer4": "Igen. Módosíthatod a dátumot, az időpontot, a szolgáltatást vagy az alkalmazottat, az ügyfél pedig értesítést kap a változásról.",
+    "answer5": "Igen. Közvetlenül az alkalmazásban manuálisan is létrehozhatsz időpontot azoknak az ügyfeleknek, akik a platformon kívül keresnek meg.",
+    "answer6": "Igen. Hozzáadhatod a csapattagokat, beállíthatod a szerepköreiket, szolgáltatásaikat, munkaidejüket és elérhetőségüket, és mindegyikük saját fiókkal rendelkezhet.",
+    "answer7": "A platform automatikusan figyelembe veszi az alkalmazottak munkaidejét, a szolgáltatások időtartamát és a meglévő foglalásokat, így csak a valóban elérhető időpontokat jeleníti meg.",
+    "answer8": "Igen. Értesítést kaphatnak az időpontokról, módosításokról, oltásokról vagy a következő látogatásra vonatkozó ajánlásokról.",
+    "answer9": "Igen. A platform közvetlen üzenetküldést is biztosíthat az üzlet és az ügyfél között, így az időponttal kapcsolatos információk egy helyen maradnak."
+  },
+  "questions": {
+    "question1": "Kipróbálhatom ingyen a platformot, mielőtt fizetnék?",
+    "question10": "Bármikor lemondhatom az előfizetést?",
+    "question2": "Az ügyfeleim önállóan is foglalhatnak időpontot online?",
+    "question3": "Minden időpontot külön meg kell erősítenem?",
+    "question4": "Módosíthatok vagy áthelyezhetek egy időpontot?",
+    "question5": "Hozzáadhatok telefonon vagy közvetlenül a recepción egyeztetett időpontokat?",
+    "question6": "Lehet több alkalmazott ugyanahhoz az üzleti fiókhoz hozzáadva?",
+    "question7": "Hogyan kerülhetem el az időpontok ütközését?",
+    "question8": "Kapnak emlékeztetőt az ügyfelek?",
+    "question9": "Kommunikálhatok közvetlenül az ügyfelekkel?"
+  },
+  "sectionDescription": "Minden, amit tudnod kell, mielőtt elkezded.",
+  "sectionTitle": {
+    "highlight": "kérdések",
+    "main": "Gyakori"
+  },
+  "title": "FAQ"
+}

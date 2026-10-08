@@ -1,0 +1,18 @@
+{
+  "backToWebsite": "← Back to website",
+  "continueWith": "or continue with",
+  "createBusinessAccount": "Business account",
+  "createClientAccount": "Client account",
+  "email": "Email",
+  "forgotPassword": "Forgot password?",
+  "noAccount": "Don't have an account yet?",
+  "password": "Password",
+  "rememberMe": "Remember me",
+  "subtitle": "Sign in to continue caring for your furry friends.",
+  "title": "Welcome back! 🐾",
+  "validation": {
+    "emailInvalid": "Enter a valid email address.",
+    "emailRequired": "Email address is required.",
+    "passwordRequired": "Password is required."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "common": {
+    "buttons": {
+      "back": "← Înapoi",
+      "continue": "Continuă →"
+    },
+    "fields": {
+      "confirmPassword": "Confirmă parola",
+      "email": "Email",
+      "password": "Parolă",
+      "phone": "Telefon"
+    }
+  },
+  "passwordRequirements": {
+    "minLength": "Minimum 8 caractere",
+    "number": "Cel puțin o cifră",
+    "passwordsDoNotMatch": "Parolele nu coincid",
+    "passwordsMatch": "Parolele coincid",
+    "specialCharacter": "Cel puțin un caracter special",
+    "title": "Parola trebuie să conțină:",
+    "uppercase": "Cel puțin o literă mare"
+  },
+  "personalInformationStep": {
+    "fields": {
+      "firstName": "Prenume",
+      "lastName": "Nume"
+    },
+    "formSubtitle": "Spune-ne câteva lucruri despre tine pentru a-ți crea contul Pufzi.",
+    "formTitle": "Datele tale"
+  },
+  "planStep": {
+    "dialog": {
+      "close": "Închide",
+      "description": "Toate funcționalitățile de care ai nevoie pentru administrarea salonului tău, într-un singur plan.",
+      "title": "Tot ce primești în plan",
+      "trialDescription": "Testezi toate funcționalitățile înainte de plată."
+    },
+    "formSubtitle": "Un singur plan complet, creat pentru saloanele care vor să lucreze modern și organizat.",
+    "formTitle": "Alege planul tău",
+    "free": "7 zile gratuit",
+    "plan": {
+      "allFeatures": "Toate funcțiile incluse",
+      "card": {
+        "benefits": {
+          "description": "Descoperă ce include Pufzi PRO",
+          "title": "Vezi toate beneficiile"
+        },
+        "subtitle": "Ai acces la toate funcționalitățile Pufzi PRO, fără limitări în perioada de trial."
+      },
+      "free": "gratuit primele 7 zile",
+      "month": "/lună",
+      "price": "200 RON",
+      "shortTitle": "PRO",
+      "subtitle": "Tot ce ai nevoie pentru salonul tău",
+      "title": "Pufzi PRO"
+    }
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Ai deja cont?",
+    "backToSite": "← Înapoi la site",
+    "businessAccount": "Cont business",
+    "login": "Autentifică-te",
+    "steps": {
+      "personalInformation": "Date personale",
+      "plan": "Plan",
+      "salon": "Salon",
+      "summary": "Sumar"
+    }
+  },
+  "salonInformationStep": {
+    "fields": {
+      "address": "Adresă",
+      "city": "Oraș",
+      "county": "Județ",
+      "postalCode": "Cod poștal",
+      "salonName": "Numele salonului"
+    },
+    "formSubtitle": "Completează informațiile principale ale salonului tău.",
+    "formTitle": "Despre salonul tău"
+  },
+  "summaryStep": {
+    "activation": {
+      "description": "După crearea contului vei primi un email cu un link de confirmare. Accesează linkul pentru a-ți activa contul Pufzi.",
+      "title": "Activează contul prin confirmarea adresei de email"
+    },
+    "columns": {
+      "personalInformation": "Date personale",
+      "salonInformation": "Date salon",
+      "selectedPlan": "Pachet ales"
+    },
+    "createAccount": "Creează contul 🎉",
+    "formSubtitle": "Verifică informațiile înainte de crearea contului.",
+    "formTitle": "Totul este pregătit! 🐾",
+    "labels": {
+      "name": "Nume",
+      "salon": "Salon"
+    }
+  },
+  "validation": {
+    "addressRequired": "Adresa este obligatorie.",
+    "cityRequired": "Orașul este obligatoriu.",
+    "confirmPasswordRequired": "Confirmarea parolei este obligatorie.",
+    "countyRequired": "Județul este obligatoriu.",
+    "emailInvalid": "Introdu o adresă de email validă.",
+    "emailRequired": "Adresa de email este obligatorie.",
+    "firstNameMinLength": "Prenumele trebuie să aibă minimum 2 caractere.",
+    "firstNameRequired": "Prenumele este obligatoriu.",
+    "lastNameMinLength": "Numele trebuie să aibă minimum 2 caractere.",
+    "lastNameRequired": "Numele este obligatoriu.",
+    "passwordMinLength": "Parola trebuie să aibă minimum 8 caractere.",
+    "passwordNumber": "Parola trebuie să conțină o cifră.",
+    "passwordRequired": "Parola este obligatorie.",
+    "passwordsDoNotMatch": "Parolele nu coincid.",
+    "passwordSpecialCharacter": "Parola trebuie să conțină un caracter special.",
+    "passwordUppercase": "Parola trebuie să conțină o literă mare.",
+    "phoneInvalid": "Introdu un număr de telefon valid.",
+    "phoneRequired": "Numărul de telefon este obligatoriu.",
+    "postalCodeRequired": "Codul poștal este obligatoriu.",
+    "salonNameRequired": "Numele salonului este obligatoriu."
+  }
+}

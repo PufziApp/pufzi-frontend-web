@@ -1,1 +1,19 @@
-{}
+{
+  "appName": "Pufzi",
+  "businessRegister": "Creează cont business",
+  "clientRegister": "Creează cont client",
+  "login": "Autentificare",
+  "logout": "Deconectare",
+  "navbar": {
+    "color": {
+      "green": "Verde Salvie",
+      "orange": "Portocaliu Cald",
+      "title": "Culoare"
+    },
+    "mode": {
+      "dark": "Întunecat",
+      "light": "Luminos",
+      "title": "Mod"
+    }
+  }
+}

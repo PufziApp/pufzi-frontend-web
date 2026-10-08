@@ -8,13 +8,11 @@ void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'ro',
 
     supportedLngs: ['en', 'hu', 'ro'],
 
     load: 'languageOnly',
-
-    ns: ['Common', 'LoginPage', 'RegisterPage'],
 
     defaultNS: 'Common',
 

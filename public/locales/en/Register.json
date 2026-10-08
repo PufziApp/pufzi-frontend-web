@@ -1,0 +1,121 @@
+{
+  "common": {
+    "buttons": {
+      "back": "← Back",
+      "continue": "Continue →"
+    },
+    "fields": {
+      "confirmPassword": "Confirm password",
+      "email": "Email",
+      "password": "Password",
+      "phone": "Phone"
+    }
+  },
+  "passwordRequirements": {
+    "minLength": "At least 8 characters",
+    "number": "At least one number",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordsMatch": "Passwords match",
+    "specialCharacter": "At least one special character",
+    "title": "Your password must contain:",
+    "uppercase": "At least one uppercase letter"
+  },
+  "personalInformationStep": {
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    },
+    "formSubtitle": "Tell us a few things about yourself so we can create your Pufzi account.",
+    "formTitle": "Your details"
+  },
+  "planStep": {
+    "dialog": {
+      "close": "Close",
+      "description": "All the features you need to manage your salon, included in one complete plan.",
+      "title": "Everything included in your plan",
+      "trialDescription": "Try all features before you pay."
+    },
+    "formSubtitle": "One complete plan, designed for salons that want to work in a modern and organized way.",
+    "formTitle": "Choose your plan",
+    "free": "7 days free",
+    "plan": {
+      "allFeatures": "All features included",
+      "card": {
+        "benefits": {
+          "description": "Discover what's included in Pufzi PRO",
+          "title": "View all benefits"
+        },
+        "subtitle": "Get access to all Pufzi PRO features with no limitations during the trial period."
+      },
+      "free": "free for the first 7 days",
+      "month": "/month",
+      "price": "200 RON",
+      "shortTitle": "PRO",
+      "subtitle": "Everything you need for your salon",
+      "title": "Pufzi PRO"
+    }
+  },
+  "registerForm": {
+    "alreadyHaveAccount": "Already have an account?",
+    "backToSite": "← Back to site",
+    "businessAccount": "Business account",
+    "login": "Log in",
+    "steps": {
+      "personalInformation": "Personal details",
+      "plan": "Plan",
+      "salon": "Salon",
+      "summary": "Summary"
+    }
+  },
+  "salonInformationStep": {
+    "fields": {
+      "address": "Address",
+      "city": "City",
+      "county": "County",
+      "postalCode": "Postal Code",
+      "salonName": "Salon name"
+    },
+    "formSubtitle": "Fill in the main information about your salon.",
+    "formTitle": "About your salon"
+  },
+  "summaryStep": {
+    "activation": {
+      "description": "After creating your account, you will receive an email with a confirmation link. Open the link to activate your Pufzi account.",
+      "title": "Activate your account by confirming your email address"
+    },
+    "columns": {
+      "personalInformation": "Personal details",
+      "salonInformation": "Salon details",
+      "selectedPlan": "Selected plan"
+    },
+    "createAccount": "Create account 🎉",
+    "formSubtitle": "Review your information before creating your account.",
+    "formTitle": "Everything is ready! 🐾",
+    "labels": {
+      "name": "Name",
+      "salon": "Salon"
+    }
+  },
+  "validation": {
+    "addressRequired": "Address is required.",
+    "cityRequired": "City is required.",
+    "confirmPasswordRequired": "Password confirmation is required.",
+    "countyRequired": "County is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "emailRequired": "Email address is required.",
+    "firstNameMinLength": "First name must contain at least 2 characters.",
+    "firstNameRequired": "First name is required.",
+    "lastNameMinLength": "Last name must contain at least 2 characters.",
+    "lastNameRequired": "Last name is required.",
+    "passwordMinLength": "Password must contain at least 8 characters.",
+    "passwordNumber": "Password must contain at least one number.",
+    "passwordRequired": "Password is required.",
+    "passwordsDoNotMatch": "Passwords do not match.",
+    "passwordSpecialCharacter": "Password must contain at least one special character.",
+    "passwordUppercase": "Password must contain at least one uppercase letter.",
+    "phoneInvalid": "Enter a valid phone number.",
+    "phoneRequired": "Phone number is required.",
+    "postalCodeRequired": "Postal code is required.",
+    "salonNameRequired": "Salon name is required."
+  }
+}

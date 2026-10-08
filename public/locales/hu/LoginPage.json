@@ -1,0 +1,18 @@
+{
+  "backToWebsite": "← Vissza a weboldalra",
+  "continueWith": "vagy folytasd ezzel",
+  "createBusinessAccount": "Üzleti fiók",
+  "createClientAccount": "Ügyfélfiók",
+  "email": "E-mail",
+  "forgotPassword": "Elfelejtetted a jelszavad?",
+  "noAccount": "Még nincs fiókod?",
+  "password": "Jelszó",
+  "rememberMe": "Emlékezz rám",
+  "subtitle": "Jelentkezz be, hogy továbbra is gondoskodhass szőrös barátaidról.",
+  "title": "Üdv újra! 🐾",
+  "validation": {
+    "emailInvalid": "Adj meg egy érvényes e-mail címet.",
+    "emailRequired": "Az e-mail cím megadása kötelező.",
+    "passwordRequired": "A jelszó megadása kötelező."
+  }
+}
